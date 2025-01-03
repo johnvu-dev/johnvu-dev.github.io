@@ -1,190 +1,4944 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <title>My Link</title>
+   <link rel="icon" href="blue_crystal.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- LY28: su dung bootstrap tren internet de hien thị cac glyphicon, tat bootstrap local  --> 
+  <!--   
+  <script src="home/TEST/jquery.min.js"></script>
+  <script src="home/TEST/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+	-->
+  <!-- BT3 Latest compiled and minified CSS 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  -->
+
+     <!-- BT4 Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- BT4 Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- BT5 Latest compiled and minified CSS 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+<!-- BT5 Latest compiled JavaScript 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
   <style>
-   * {
-  margin: 0;
-  padding: 0;
-	}
-	
-	.wrapper {
-  height: 100%;
-  width: 100%;
-  background-color: #0066cc;
-  position: absolute;
-}
-
-
-
-.wrapper h1 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  font-family: sans-serif;
-  word-spacing: 2px;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 900;
-}
-
-.wrapper div {
-    height: 60px;
-    width: 60px;
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    border-radius: 100px;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    animation: 4s linear infinite;
-}
-
-div .dot {
-    height: 5px;
-    width: 5px;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    top: 20%;
-    right: 20%;
-}
-
-.wrapper div:nth-child(2) {
-    top: 20%;
-    left: 20%;
-    animation: animate 8s linear infinite;
-}
-
-.wrapper div:nth-child(3) { 
-    top: 60%;
-    left: 80%;
-    animation: animate 10s linear infinite;
-}
-
-.wrapper div:nth-child(4) { 
-    top: 40%;
-    left: 40%; 
-    animation: animate 3s linear infinite;
-}
-
-.wrapper div:nth-child(5) {
-    top: 66%;
-    left: 30%;
-    animation: animate 7s linear infinite;
-}
-
-.wrapper div:nth-child(6) {
-    top: 90%;
-    left: 10%;
-    animation: animate 9s linear infinite;
-}
-
-.wrapper div:nth-child(7) {
-    top: 30%;
-    left: 60%;
-    animation: animate 5s linear infinite;
-}
-
-.wrapper div:nth-child(8) {
-    top: 70%;
-    left: 20%;
-    animation: animate 8s linear infinite;
-}
-
-.wrapper div:nth-child(9) {
-    top: 75%;
-    left: 60%;
-    animation: animate 10s linear infinite;
-}
-
-.wrapper div:nth-child(10) {
-    top: 50%;
-    left: 50%;
-    animation: animate 6s linear infinite;
-}
-
-.wrapper div:nth-child(11) {
-    top: 45%;
-    left: 20%;
-    animation: animate 10s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        transform: scale(0) translateY(0) rotate(70deg);
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
     }
-    100% {
-        transform: scale(1.3) translateY(-100px) rotate(360deg);
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
     }
-}
   </style>
 </head>
 <body>
-    <section class="wrapper">
-        <h1></h1>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-    </section>
-<div class="mermaid">
-mindmap
-(Essay Outline)
-    (Intro)
-        1. sparked a heated debate
-          drawn public attention
-        2. Some people
-          firmly convinced that
-        3. while others
-          argue that
-        4. After thorough consideration of all relevant factors
-          I believe that 
-            the topic results in less air pollution and fewer traffic jams.  
-    (Body 1)
-        1. First of all
-          when viewed from the environmental perspective
-            it is evident that the topic causes less air pollution. 
-        2. Although the potentially negative impacts of topic must be taken into account
-          I still reckon that public transportation has in many ways benefited us. 
-        3. For example
-          a prominent scientist once stated that 
-        4. It is thus clearly shown that 
-          one advantage of topic is the reduction of air pollution.  
-    (Body 2)
-        1. On the other hand
-          another social factor should also be taken into account in this situation. 
-        2. As far as society is concerned
-          the ultimate aim of public transportation is 
-            to make our life more convenient. 
-        3. For instance
-          a recent article published in The Economist revealed that 
-            the problem of traffic jams can be signifcantly alleviated when people choose the topic. 
-        4. Undoubtedly
-          this is a clear indication that 
-            another advantage of the topic is fewer traffic jams. 
-    (Sum up)
-        In conclusion
-          1. due to the reasons outlined above
-            I have a strong belief that the advantages of the topic are
-          2. In order to move things forward
-            all parties involved must make a concerted effort to communicate and start changing. 
-          3. With all our efforts
-            we can certainly make this world a much better place to live.
-</div>
-<script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.esm.min.mjs';
-import mindmap from 'https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/mermaid-mindmap.esm.min.mjs';
-await mermaid.registerExternalDiagrams([mindmap]);
 
-mermaid.initialize({
-startOnLoad:true
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">My Links</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="hobby.html" target = _blank> <i class="fas fa-heart"></i> Hobby</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="business.html" target = _blank> <i class="fas fa-heart"></i> MyBusiness</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container-fluid bg-3 text-center">    
+  <h3>Master Link</h3><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <p>  MS OFFICE 365</p>
+      
+	  <a href="https://www.office.com/" class="btn btn-success" role="button" target = _blank > OFFICE 365 </a>
+    <a href="https://outlook.office.com/" class="btn btn-info" role="button" target = _blank > OUTLOOK 365 </a>
+	  <a href="https://outlook.live.com/" class="btn btn-info" role="button" target = _blank > OUTLOOK </a>
+	  
+    <a href="https://make.powerapps.com/" class="btn btn-info" role="button" target = _blank > powerapps </a>
+    <a href="https://tasks.office.com/" class="btn btn-info" role="button" target = _blank > planner </a>
+    <a href="https://to-do.office.com/" class="btn btn-info" role="button" target = _blank > to-do </a>
+    <a href="https://docs.microsoft.com/en-us/learn/" class="btn btn-info" role="button" target = _blank >MS learn </a>
+	  <a href="https://portal.azure.com/" class="btn btn-info" role="button" target = _blank > azure </a>
+    </div>
+	
+    <div class="col-sm-3"> 
+      <p>Check Tool</p>
+      <a href="https://endoflife.date/" class="btn btn-info" role="button" target = _blank > SW EOL check</a>
+	  <a href="https://testconnectivity.microsoft.com/" class="btn btn-info" role="button" target = _blank > MS Test TOOL </a>
+    <a href="https://ping.eu/" class="btn btn-info" role="button" target = _blank > Ping eu TOOL </a>
+	  <a href="https://fast.com/" class="btn btn-info" role="button" target = _blank > fast.com </a>
+    <a href="https://www.speedtest.net/" class="btn btn-info" role="button" target = _blank > speedtest.net </a>
+    <a href="https://speedtest.vn/" class="btn btn-success" role="button" target = _blank > speedtest.vn </a>
+    
+    <a href="https://geekflare.com/" class="btn btn-info" role="button" target = _blank > geekflare </a>
+	  <a href="https://congcu.khonggianmang.vn/check-ipma/" class="btn btn-info" role="button" target = _blank > khonggianmang security tool </a>
+    <a href="https://www.virustotal.com/" class="btn btn-primary" role="button" target = _blank > virus total </a>
+    <a href="https://talosintelligence.com/software" class="btn btn-primary" role="button" target = _blank > talos tool </a>
+    
+  
+	  
+    </div>
+    <div class="col-sm-3"> 
+      <p>MGR App</p>
+      <a href="http://myzion01.synology.me:88/" class="btn btn-info" role="button" target = _blank > Mywiki </a>
+      <a href="http://myzion01.synology.me:92/" class="btn btn-info" role="button" target = _blank > MyEbook </a>
+      <a href="http://myzion01.synology.me:8082/" class="btn btn-info" role="button" target = _blank > MyMusic </a>
+	  <a href="https://trello.com/" class="btn btn-info" role="button" target = _blank > <span class="glyphicon glyphicon-star"></span> My trello</a>
+    <a href="https://www.teamgantt.com/" class="btn btn-info" role="button" target = _blank > <span class="glyphicon glyphicon-star"></span> teamgantt</a>
+    <a href="https://www.mindomo.com/" class="btn btn-info" role="button" target = _blank > <span class="glyphicon glyphicon-star"></span> Mindomo</a>
+    <a href="https://app.diagrams.net/" class="btn btn-info" role="button" target = _blank > <span class="glyphicon glyphicon-star"></span> diagrams.net</a>
+    <a href="https://www.figma.com/" class="btn btn-info span2" role="button" target = _blank > Figma Mind Flow</a>
+    <a href="https://www.udemy.com/" class="btn btn-info span2" role="button" target = _blank > Udemy elearning</a>
+    <a href="https://www.canva.com/" class="btn btn-primary span2" role="button" target = _blank > canva</a>
+    <a href="https://www.coursera.org/" class="btn btn-success span2" role="button" target = _blank > coursera</a>
+    
+    
+    
+    </div>
+    <div class="col-sm-3">
+      
+      <p>Manual</p>
+      <a href="https://ankiweb.net/" class="btn btn-info span2" role="button" target = _blank > anki </a>
+      <a href="https://www.onlinegdb.com/" class="btn btn-info span2" role="button" target = _blank > online coding </a>
+      <a href="https://www.mycompiler.io/" class="btn btn-info span2" role="button" target = _blank > online coding mycompiler</a>
+      <a href="https://codepen.io/pen/" class="btn btn-info span2" role="button" target = _blank > online coding codepen</a>
+      <a href="https://my.vultr.com/" class="btn btn-info span2" role="button" target = _blank > VPS vultr </a>
+       <a href="http://vnbook.com.vn/" class="btn btn-info span2" role="button" target = _blank > vnbook </a>
+      <a href="https://www.pinterest.com/" class="btn btn-info span2" role="button" target = _blank > pinterest </a>
+     <a href="https://g.co/verifyaccount" class="btn btn-info span2" role="button" target = _blank > GG verifyaccount </a>
+    <a href="https://quickconnect.to/" class="btn btn-info span2" role="button" target = _blank > Quick Connect </a>
+		<a href="https://ss64.com/" class="btn btn-info span2" role="button" target = _blank > ss64 CMD PS Linux VB </a>
+	  <a href="https://along-with-the-gods-knights-of-the-dawn.fandom.com/" class="btn btn-info span2" role="button" target = _blank > along w God </a>	
+    <a href="http://192.168.1.39:5000/" class="btn btn-info span2" role="button" target = _blank > MyCloud </a>	
+    <a href="https://virtualpiano.github.io/" class="btn btn-info span2" role="button" target = _blank > virtual piano </a>	
+		
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-3">
+      <p> Google</p>
+      
+      <a href="https://tasksboard.com/app" class="btn btn-success" role="button" target = _blank >  GG Task</a>
+       <a href="https://mail.google.com/" class="btn btn-info span2" role="button" target = _blank > Gmail </a>
+       <a href="https://docs.google.com/spreadsheets/" class="btn btn-info" role="button" target = _blank > GG Excel</a>
+      <a href="https://translate.google.com" class="btn btn-info" role="button" target = _blank >  GG Translate</a>
+      <a href="https://maps.google.com" class="btn btn-primary" role="button" target = _blank >  GG Map</a>
+      <a href="https://chat.google.com" class="btn btn-info" role="button" target = _blank > GG Chat</a>
+      <a href="https://meet.google.com" class="btn btn-info" role="button" target = _blank >  GG Meet</a>
+      <a href="https://keep.google.com" class="btn btn-info" role="button" target = _blank >  GG Keep</a>
+      <a href="https://console.cloud.google.com/" class="btn btn-info" role="button" target = _blank >  GG Cloud</a>
+      <a href="https://youtube.com" class="btn btn-info" role="button" target = _blank > GG youtube</a>
+      <a href="https://chrome.google.com/webstore/category/extensions?hl=en" class="btn btn-info" role="button" target = _blank >  chrome store</a>
+      
+      <a href="https://spaces.w3schools.com/" class="btn btn-info" role="button" target = _blank > Space w3schools </a>
+
+	  	  
+    </div>
+	
+    <div class="col-sm-3"> 
+      <p>IT News</p>
+      <a href="https://quantribaomat.com/" class="btn btn-success span2" role="button" target = _blank > quantribaomat </a>
+      <a href="https://www.windowscentral.com" class="btn btn-info span2" role="button" target = _blank > windows central </a>
+      <a href="https://www.securitymagazine.com/" class="btn btn-info span2" role="button" target = _blank > security magazine </a>
+      <a href="https://thehackernews.com/" class="btn btn-info span2" role="button" target = _blank > the hacker news </a>
+      <a href="https://www.bleepingcomputer.com/" class="btn btn-info span2" role="button" target = _blank > bleepingcomputer </a>
+      <a href="https://www.pcworld.com/" class="btn btn-info span2" role="button" target = _blank > pcworld </a>
+      <a href="https://quantrimang.com/" class="btn btn-success span2" role="button" target = _blank > quantrimang </a>
+      <a href="https://icongnghe.com/" class="btn btn-info span2" role="button" target = _blank > icongnghe </a>
+      <a href="https://www.howtogeek.com/" class="btn btn-info span2" role="button" target = _blank > howtogeek</a>
+      <a href="https://www.bachdyon.com/" class="btn btn-info span2" role="button" target = _blank > bachdyon AI</a>
+      <a href="https://www.tungtek.com/" class="btn btn-info span2" role="button" target = _blank > tungtek Teck</a>
+      
+      
+      
+    </div>
+	
+    <div class="col-sm-3"> 
+      <p>Tool</p>
+      
+      <a href="https://send-anywhere.com/" class="btn btn-primary span2" role="button" target = _blank > send-anywhere </a>
+      <a href="https://www.transfernow.net/en" class="btn btn-primary span2" role="button" target = _blank > transfernow </a>
+      <a href="https://padlet.com/" class="btn btn-info span2" role="button" target = _blank > padlet </a>
+      <a href="https://snipboard.io/" class="btn btn-info span2" role="button" target = _blank > Snip board </a>
+      <a href="https://www.convertsimple.com/" class="btn btn-info span2" role="button" target = _blank > code converter </a>
+      <a href="https://www.ocr.best/image-to-text" class="btn btn-info span2" role="button" target = _blank > OCR </a>
+      <a href="https://ttsopenai.com/" class="btn btn-info span2" role="button" target = _blank > Text to Speech </a>
+      <a href="https://onedrive.live.com/about/en-us/signin/" class="btn btn-info" role="button" target = _blank > OneDrive 5G </a>
+      <a href="https://www.rakuten-drive.com/cloud/mydrive/" class="btn btn-info span2" role="button" target = _blank > rakuten-drive 10G </a>
+      <a href="https://my.pcloud.com/" class="btn btn-info span2" role="button" target = _blank > Pcloud Drive 10G </a>
+      <a href="https://www.terabox.com/" class="btn btn-info span2" role="button" target = _blank > Terabox 1TB </a>
+      
+      
+  
+    </div>
+    <div class="col-sm-3">
+      <p>Other</p>
+		
+	
+  <a href="https://github.com/" class="btn btn-info span2" role="button" target = _blank > git HUB </a>
+  <a href="https://gitlab.com/" class="btn btn-info span2" role="button" target = _blank > git LAB </a>
+
+  <a href="https://dashboard.render.com/" class="btn btn-info span2" role="button" target = _blank >Render Hosting </a>	
+  <a href="https://expo.dev/" class="btn btn-success span2" role="button" target = _blank >Expo ReactNative </a>
+  <a href="https://codesandbox.io/" class="btn btn-info span2" role="button" target = _blank >code sand box </a>
+  <a href="https://codejr.org/" class="btn btn-info span2" role="button" target = _blank >scratchJR </a>
+    
+     <a href="https://gemini.google.com/" class="btn btn-info span2" role="button" target = _blank > Gemini AI </a>
+     <a href="https://chat.openai.com/" class="btn btn-info span2" role="button" target = _blank > Chat GPT AI </a>	  
+     <a href="https://copilot.microsoft.com/" class="btn btn-info span2" role="button" target = _blank > Copilot AI </a>	 
+     <a href="https://character.ai" class="btn btn-info span2" role="button" target = _blank > character AI </a>	  
+     <a href="https://www.ciciai.com/" class="btn btn-info span2" role="button" target = _blank > CICI AI </a>	  
+     <a href="https://www.coze.com/" class="btn btn-info span2" role="button" target = _blank > COZE AI </a>
+     <a href="https://notebooklm.google/" class="btn btn-info span2" role="button" target = _blank > notebooklm </a>
+  
+    </div>
+  </div>
+</div>
+<br>
+
+<br>
+
+ <div class="d-flex flex-wrap align-content-start bg-light" >
+    <div class="p-2 border">#A.I</div>
+    <div class="p-2 border">#App</div>
+    <div class="p-2 border">#Blog</div>
+    <div class="p-2 border">#Cloud</div>
+    <div class="p-2 border">#Coin</div>
+    <div class="p-2 border">#Dev</div>
+    <div class="p-2 border">#Dictionary</div>
+    <div class="p-2 border">#Exchange</div>
+    <div class="p-2 border">#Government</div>
+    <div class="p-2 border">#Job</div>
+    <div class="p-2 border">#Lottery</div>
+    <div class="p-2 border">#News</div>
+    <div class="p-2 border">#P2E</div>
+    <div class="p-2 border">#Tool</div>
+    <div class="p-2 border">#Security</div>
+    <div class="p-2 border">#Social</div>
+    <div class="p-2 border">#Wallet</div>
+  </div>
+<br>
+
+<table id="jsonTable" class="display">
+    <thead>
+        <tr>
+            <th>Num</th>
+            <th>Link</th>
+            <th>Desc</th>
+            <th>Tag</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be dynamically inserted here -->
+    </tbody>
+</table>
+
+<!-- Include jQuery and DataTables JS from CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script>
+  // Sample JSON data
+const jsonData01 = [
+    
+  {
+    "No": "1",
+    "Link": " https://password.kaspersky.com/",
+    "Desc": " Web tool",
+    "Tag": " Tool",
+    "Status": ""
+  },
+  {
+    "No": "2",
+    "Link": " https://www.nirsoft.net/",
+    "Desc": " Web tool",
+    "Tag": " Tool",
+    "Status": ""
+  },
+  {
+    "No": "3",
+    "Link": " https://www.sendgb.com/",
+    "Desc": " Web tool",
+    "Tag": " Send Big File",
+    "Status": ""
+  },
+  {
+    "No": "4",
+    "Link": "https://send-anywhere.com/ ",
+    "Desc": " Web tool ",
+    "Tag": " Send Big File ",
+    "Status": ""
+  },
+  {
+    "No": "5",
+    "Link": "https://www.dcode.fr/sha512-hash ",
+    "Desc": " Web tool ",
+    "Tag": " Decode Encode ",
+    "Status": ""
+  },
+  {
+    "No": "6",
+    "Link": "http://www.fileconvoy.com/ ",
+    "Desc": " Web tool ",
+    "Tag": " Send Big File Max 3GB ",
+    "Status": ""
+  },
+  {
+    "No": "7",
+    "Link": "https://t.ly/ ",
+    "Desc": " Web tool ",
+    "Tag": " Shorten Url",
+    "Status": ""
+  },
+  {
+    "No": "8",
+    "Link": "https://www.qr-code-generator.com/solutions/wifi-qr-code/ ",
+    "Desc": " Web tool ",
+    "Tag": " QR",
+    "Status": ""
+  },
+  {
+    "No": "9",
+    "Link": "https://www.photoroom.com/background-remover/ ",
+    "Desc": " Web tool ",
+    "Tag": " Shorten Url",
+    "Status": ""
+  },
+  {
+    "No": "10",
+    "Link": "https://scriptasylum.com/tutorials/encode-decode.html ",
+    "Desc": " Web tool ",
+    "Tag": " Decode Encode",
+    "Status": ""
+  },
+  {
+    "No": "11",
+    "Link": "https://ngrok.com/ ",
+    "Desc": " localhost forwarder ",
+    "Tag": " Shorten Url",
+    "Status": ""
+  },
+  {
+    "No": "12",
+    "Link": "https://coggle.it/ ",
+    "Desc": " Web tool ",
+    "Tag": " Mind Map, Flowchart",
+    "Status": ""
+  },
+  {
+    "No": "13",
+    "Link": "https://www.teamgantt.com/ ",
+    "Desc": " Web tool ",
+    "Tag": " Team Gantt chart",
+    "Status": ""
+  },
+  {
+    "No": "14",
+    "Link": "https://www.mindomo.com/ ",
+    "Desc": " Web tool ",
+    "Tag": " Mind Map, Flowchart",
+    "Status": ""
+  },
+  {
+    "No": "15",
+    "Link": "https://invisionapp.com ",
+    "Desc": " Web tool ",
+    "Tag": " UI, design",
+    "Status": ""
+  },
+  {
+    "No": "16",
+    "Link": "https://www.figma.com/ ",
+    "Desc": " Web tool ",
+    "Tag": " UI, design",
+    "Status": ""
+  },
+  {
+    "No": "17",
+    "Link": "https://wifiman.com/ ",
+    "Desc": " Web tool ",
+    "Tag": " Tool ",
+    "Status": ""
+  },
+  {
+    "No": "18",
+    "Link": "https://speedtest.net/ ",
+    "Desc": " Web tool ",
+    "Tag": " Tool ",
+    "Status": ""
+  },
+  {
+    "No": "19",
+    "Link": "https://speedtest.vn/ ",
+    "Desc": " Web tool ",
+    "Tag": " Tool ",
+    "Status": ""
+  },
+  {
+    "No": "20",
+    "Link": "https://fast.com/ ",
+    "Desc": " Web tool ",
+    "Tag": " Tool ",
+    "Status": ""
+  },
+  {
+    "No": "21",
+    "Link": "https://vscode.dev/ ",
+    "Desc": " Visual Studio Code online",
+    "Tag": " Tool ",
+    "Status": ""
+  },
+  {
+    "No": "22",
+    "Link": "https://www.onlinegdb.com/ ",
+    "Desc": " Code online ",
+    "Tag": " Tool ",
+    "Status": ""
+  },
+  {
+    "No": "23",
+    "Link": "https://cheatography.com/ ",
+    "Desc": " Web tool ",
+    "Tag": " Tool ",
+    "Status": ""
+  },
+  {
+    "No": "24",
+    "Link": "https://workat.tech/ ",
+    "Desc": " Code online, Web tool ",
+    "Tag": " Tool ",
+    "Status": ""
+  },
+  {
+    "No": "25",
+    "Link": "https://www.mycompiler.io/ ",
+    "Desc": " Code online, Web tool ",
+    "Tag": " Tool ",
+    "Status": ""
+  },
+  {
+    "No": "26",
+    "Link": "https://www.tutorialspoint.com/",
+    "Desc": " Code online, Web tool ",
+    "Tag": " Tool ",
+    "Status": ""
+  },
+  {
+    "No": "27",
+    "Link": "http://savevideo.me/ ",
+    "Desc": " Dailymotion, Facebook, Vimeo, Twitter, Instagram, TikTok, Aol Video, Rumble.com",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": "28",
+    "Link": "https://www.microsoft.com/en-us/software-download/windows11 ",
+    "Desc": " Window download",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": "29",
+    "Link": "https://software.informer.com/ ",
+    "Desc": "software",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": "30",
+    "Link": "https://archive.synology.com/download ",
+    "Desc": "software",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": "31",
+    "Link": "https://www.ddth.com/ ",
+    "Desc": " dien dan tin hoc",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": "32",
+    "Link": "https://techcult.com ",
+    "Desc": " tech",
+    "Tag": " tip ",
+    "Status": ""
+  },
+  {
+    "No": "33",
+    "Link": "https://phoenixnap.com/blog/ ",
+    "Desc": " IT",
+    "Tag": " tip ",
+    "Status": ""
+  },
+  {
+    "No": "34",
+    "Link": "https://secc.com.vn/events",
+    "Desc": " info",
+    "Tag": " exhibition ",
+    "Status": ""
+  },
+  {
+    "No": "35",
+    "Link": "https://www.lifewire.com/",
+    "Desc": " info",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "36",
+    "Link": "https://www.lifesavvy.com/",
+    "Desc": " info",
+    "Tag": " Life ",
+    "Status": ""
+  },
+  {
+    "No": "37",
+    "Link": "http://woshub.com/",
+    "Desc": " info",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "38",
+    "Link": "https://windows789.com/",
+    "Desc": " info",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "39",
+    "Link": "https://www.instructure.com/",
+    "Desc": " info",
+    "Tag": " Learning, elearn",
+    "Status": ""
+  },
+  {
+    "No": "40",
+    "Link": "https://harvard.service-now.com/ithelp?id=index",
+    "Desc": " info",
+    "Tag": " Learning",
+    "Status": ""
+  },
+  {
+    "No": "41",
+    "Link": "https://howtofix.guide/",
+    "Desc": " info",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "42",
+    "Link": "https://windowsreport.com/",
+    "Desc": " info",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "43",
+    "Link": "https://www.xda-developers.com/",
+    "Desc": " info",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "44",
+    "Link": "https://www.opensourceforu.com/",
+    "Desc": " info",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "45",
+    "Link": "https://www.howtogeek.com/",
+    "Desc": " info",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "46",
+    "Link": "https://jkp-ads.com/",
+    "Desc": " Excel Pro",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "47",
+    "Link": "https://baohiemxahoi.gov.vn/tracuu/Pages/dang-nhap-tra-cuu.aspx",
+    "Desc": " BHXH",
+    "Tag": " BHYT ",
+    "Status": ""
+  },
+  {
+    "No": "48",
+    "Link": "https://ais.gov.vn/",
+    "Desc": " Cuc An toan thong tin",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "49",
+    "Link": "https://networkpro.vn/",
+    "Desc": " network shop",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "50",
+    "Link": "https://blog.hezser.de/",
+    "Desc": " personal info",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "51",
+    "Link": "https://www.fortinet.com/blog",
+    "Desc": " sercurity infot",
+    "Tag": " IT ",
+    "Status": ""
+  },
+  {
+    "No": "52",
+    "Link": "https://sdt.wiki/",
+    "Desc": " so dien thoai",
+    "Tag": " phone number ",
+    "Status": ""
+  },
+  {
+    "No": "53",
+    "Link": "https://account.samsung.com/ ",
+    "Desc": " acc Samsung",
+    "Tag": " ID ",
+    "Status": ""
+  },
+  {
+    "No": "54",
+    "Link": "https://www.icloud.com/ ",
+    "Desc": " acc Apple",
+    "Tag": " ID ",
+    "Status": ""
+  },
+  {
+    "No": "55",
+    "Link": "https://diyeverything.xyz ",
+    "Desc": " acc Apple",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": "56",
+    "Link": "https://blynk.io/en/developers ",
+    "Desc": " all device on app",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": "57",
+    "Link": "http://www.wch-ic.com/ ",
+    "Desc": " ic company ",
+    "Tag": " company ",
+    "Status": ""
+  },
+  {
+    "No": "58",
+    "Link": "https://chotroihn.vn/ ",
+    "Desc": " acc Apple",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": "59",
+    "Link": "https://arduino.esp8266.vn/",
+    "Desc": " acc Apple",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": "60",
+    "Link": "https://stripe.com/",
+    "Desc": " profile",
+    "Tag": "  ",
+    "Status": ""
+  },
+  {
+    "No": "61",
+    "Link": "https://cic.gov.vn/",
+    "Desc": " check tin dung vn",
+    "Tag": "  ",
+    "Status": ""
+  },
+  {
+    "No": "62",
+    "Link": "https://www.trademe.co.nz/",
+    "Desc": "NZ ",
+    "Tag": "trade, job  ",
+    "Status": ""
+  },
+  {
+    "No": "63",
+    "Link": "https://iccp.org/index.html",
+    "Desc": " ",
+    "Tag": "cert, IT  ",
+    "Status": ""
+  },
+  {
+    "No": "64",
+    "Link": "https://www.comptia.org/certifications/a",
+    "Desc": " comptia",
+    "Tag": "cert, IT  ",
+    "Status": ""
+  },
+  {
+    "No": "65",
+    "Link": "https://dichvucong.dancuquocgia.gov.vn/",
+    "Desc": "  ",
+    "Tag": "hanh chinh, cong an, 1 cua  ",
+    "Status": ""
+  },
+  {
+    "No": "66",
+    "Link": "https://beacons.ai/ ",
+    "Desc": " profile",
+    "Tag": "  ",
+    "Status": ""
+  },
+  {
+    "No": "67",
+    "Link": "https://shopee.vn/electroniccity.vn ",
+    "Desc": " đồ điện ",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": "68",
+    "Link": "https://shopee.vn/linh_kien_store?categoryId=100640&itemId=2064389011&page=1&sortBy=pop ",
+    "Desc": " đồ điện ",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": "69",
+    "Link": "https://mualinhkien.vn/ ",
+    "Desc": " đồ điện ",
+    "Tag": " Shop ",
+    "Status": ""
+  },
+  {
+    "No": " 70 ",
+    "Link": " http://animerg.net/ ",
+    "Desc": " movie ",
+    "Tag": " ,  animerg.net,  ",
+    "Status": ""
+  },
+  {
+    "No": " 71 ",
+    "Link": " http://animetorrents.me/ ",
+    "Desc": " ad earn ",
+    "Tag": " ,  animetorrents.me,  ",
+    "Status": ""
+  },
+  {
+    "No": " 72 ",
+    "Link": " http://appstore.vn/a/ ",
+    "Desc": " app ",
+    "Tag": " ,  Appstore.vn android,  ",
+    "Status": ""
+  },
+  {
+    "No": " 73 ",
+    "Link": " http://arduino.vn/ ",
+    "Desc": " diy ",
+    "Tag": " ,  arduino.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 74 ",
+    "Link": " http://arm.vn/ ",
+    "Desc": " wiki ",
+    "Tag": " arm,  ARM.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 75 ",
+    "Link": " http://armstreet.com/ ",
+    "Desc": " hobby ",
+    "Tag": " ,  armstreet.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 76 ",
+    "Link": " http://banhangdientu.com/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  lkdt banhangdientu.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 77 ",
+    "Link": " http://banlinhkien.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " part,  lktd banlinhkien.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 78 ",
+    "Link": " http://banner.fotor.com/ ",
+    "Desc": " web tool ",
+    "Tag": " banner,  banner make online,  ",
+    "Status": ""
+  },
+  {
+    "No": " 79 ",
+    "Link": " http://bienhoapower.com ",
+    "Desc": " info ",
+    "Tag": " ,  lich cup dien bien hoa Dtl,  ",
+    "Status": ""
+  },
+  {
+    "No": " 80 ",
+    "Link": " http://bkit4u.com/ ",
+    "Desc": " diy ",
+    "Tag": " ,  BK CLUB,  ",
+    "Status": ""
+  },
+  {
+    "No": " 81 ",
+    "Link": " http://blog.chuyenlaptrinh.net ",
+    "Desc": " code ",
+    "Tag": " C#,  blog chuyen lap trinh,  ",
+    "Status": ""
+  },
+  {
+    "No": " 82 ",
+    "Link": " http://chuyenngoaingu.com/ ",
+    "Desc": " language ",
+    "Tag": " ,  chuyenngoaingu.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 83 ",
+    "Link": " http://codepen.io/pen/ ",
+    "Desc": " code online ",
+    "Tag": " ,  code pen onlinecode,  ",
+    "Status": ""
+  },
+  {
+    "No": " 84 ",
+    "Link": " http://coolrom.com/ ",
+    "Desc": " game down ",
+    "Tag": " ,  game coolrom.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 85 ",
+    "Link": " http://cordobo.com/ ",
+    "Desc": " code ",
+    "Tag": " ,  cordobo,  ",
+    "Status": ""
+  },
+  {
+    "No": " 86 ",
+    "Link": " http://csharp.net-informations.com ",
+    "Desc": " code ",
+    "Tag": " C#, ASP.NET,  csharp net,  ",
+    "Status": ""
+  },
+  {
+    "No": " 87 ",
+    "Link": " http://css3generator.com/ ",
+    "Desc": " web tool ",
+    "Tag": " css,  css3generator,  ",
+    "Status": ""
+  },
+  {
+    "No": " 88 ",
+    "Link": " http://dangkykinhdoanh.gov.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  dangkykinhdoanh.gov.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 89 ",
+    "Link": " http://dantri.com.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  Dân trí,  ",
+    "Status": ""
+  },
+  {
+    "No": " 90 ",
+    "Link": " http://datdai.stnmt.dongnai.gov.vn/ ",
+    "Desc": " info ",
+    "Tag": " dat dai,  dat dai dong nai,  ",
+    "Status": ""
+  },
+  {
+    "No": " 91 ",
+    "Link": " http://dathangtrungquoc.org/ ",
+    "Desc": " shipper ",
+    "Tag": " ,  dathangtrungquoc.org,  ",
+    "Status": ""
+  },
+  {
+    "No": " 92 ",
+    "Link": " http://denpinsieusang.info/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  denpinsieusang.info,  ",
+    "Status": ""
+  },
+  {
+    "No": " 93 ",
+    "Link": " http://devbe.net/ ",
+    "Desc": " code ",
+    "Tag": " ,  devbe.net coding,  ",
+    "Status": ""
+  },
+  {
+    "No": " 94 ",
+    "Link": " http://didongsaigon.com.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  didongsaigon,  ",
+    "Status": ""
+  },
+  {
+    "No": " 95 ",
+    "Link": " http://diemfashion.blogspot.com/ ",
+    "Desc": " mysite ",
+    "Tag": " ,  diemfashion.blogspot.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 96 ",
+    "Link": " http://dientuachau.com ",
+    "Desc": " shopping ",
+    "Tag": " ,  DIEN TU A CHAU - LK dien tu,  ",
+    "Status": ""
+  },
+  {
+    "No": " 97 ",
+    "Link": " http://dientutiachop.com/Trang-chu.html ",
+    "Desc": " shopping ",
+    "Tag": " ,  lkdt dientutiachop,  ",
+    "Status": ""
+  },
+  {
+    "No": " 98 ",
+    "Link": " http://dig.do/ ",
+    "Desc": " web tool ",
+    "Tag": " seo,  dig.do SEO,  ",
+    "Status": ""
+  },
+  {
+    "No": " 99 ",
+    "Link": " http://dlbh.pcdongnai.vn ",
+    "Desc": " info ",
+    "Tag": " dien luc bien hoa,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 100 ",
+    "Link": " http://domoticx.com/ ",
+    "Desc": " dang tin mat 5k ",
+    "Tag": " hobby code,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 101 ",
+    "Link": " http://downloads.khinsider.com/ ",
+    "Desc": " music down ",
+    "Tag": " ,  downloads.khinsider.com music game,  ",
+    "Status": ""
+  },
+  {
+    "No": " 102 ",
+    "Link": " http://duhocduc.org ",
+    "Desc": " news ",
+    "Tag": " german,  du hoc duc,  ",
+    "Status": ""
+  },
+  {
+    "No": " 103 ",
+    "Link": " http://dungcusangtao.com/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  dungcusangtao.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 104 ",
+    "Link": " http://ebook3000.biz ",
+    "Desc": " ebook ",
+    "Tag": " magazine,  ebook 3000,  ",
+    "Status": " die ",
+    "": ""
+  },
+  {
+    "No": " 105 ",
+    "Link": " http://ebook-dl.com ",
+    "Desc": " ebook ",
+    "Tag": " ,  ebook-dl.com,  ",
+    "Status": " die ",
+    "": ""
+  },
+  {
+    "No": " 106 ",
+    "Link": " http://englishteststore.net/ ",
+    "Desc": " language ",
+    "Tag": " ,  englishteststore.net,  ",
+    "Status": ""
+  },
+  {
+    "No": " 107 ",
+    "Link": " http://esms.vn ",
+    "Desc": " web tool ",
+    "Tag": " sms,  Esms.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 108 ",
+    "Link": " http://extratorrent.com/ ",
+    "Desc": " torrent ",
+    "Tag": " ,  Extratorrent,  ",
+    "Status": ""
+  },
+  {
+    "No": " 109 ",
+    "Link": " http://fado.vn ",
+    "Desc": " shipper ",
+    "Tag": " ,  fado.vn amazon,  ",
+    "Status": ""
+  },
+  {
+    "No": " 110 ",
+    "Link": " http://fastpiratebay.eu/thepiratebay.se/ ",
+    "Desc": " torrent ",
+    "Tag": " ,  fastpiratebay.eu,  ",
+    "Status": ""
+  },
+  {
+    "No": " 111 ",
+    "Link": " http://fitgirl-repacks.site/ ",
+    "Desc": " game down ",
+    "Tag": " ,  fitgirl-repacks.site game,  ",
+    "Status": ""
+  },
+  {
+    "No": " 112 ",
+    "Link": " http://fluent.microsoft.com/ ",
+    "Desc": " code ",
+    "Tag": " new code,  fluent microsoft,  ",
+    "Status": ""
+  },
+  {
+    "No": " 113 ",
+    "Link": " http://fly.gargantia.jp// ",
+    "Desc": " game acc ",
+    "Tag": " ,  fly.gargantia.jp,  ",
+    "Status": ""
+  },
+  {
+    "No": " 114 ",
+    "Link": " http://forum.electricunicycle.org ",
+    "Desc": " diy ",
+    "Tag": " ,  electricunicycle.org,  ",
+    "Status": ""
+  },
+  {
+    "No": " 115 ",
+    "Link": " http://forum.pcbviet.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  pcbviet design,  ",
+    "Status": ""
+  },
+  {
+    "No": " 116 ",
+    "Link": " http://fptshop.com.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  FPT Computer- DT, Laptop,  ",
+    "Status": ""
+  },
+  {
+    "No": " 117 ",
+    "Link": " http://freelancerviet.vn/ ",
+    "Desc": " freelancer ",
+    "Tag": " ,  freelancerviet.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 118 ",
+    "Link": " http://fritzing.org/home/ ",
+    "Desc": " diy ",
+    "Tag": " ,  fritzing.org DIY,  ",
+    "Status": ""
+  },
+  {
+    "No": " 119 ",
+    "Link": " http://gaijinpot.com/ ",
+    "Desc": " job ",
+    "Tag": " jap,  gaijinpot.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 120 ",
+    "Link": " http://garatemplate.blogspot.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  garatemplate,  ",
+    "Status": ""
+  },
+  {
+    "No": " 121 ",
+    "Link": " http://giaodichtrungquoc.com/ ",
+    "Desc": " shipper ",
+    "Tag": " ,  giaodichtrungquoc.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 122 ",
+    "Link": " http://giasutinhoc.vn ",
+    "Desc": " code ",
+    "Tag": " android,  giasutinhoc.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 123 ",
+    "Link": " http://giaypatinvn.com/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  giaypatinvn.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 124 ",
+    "Link": " http://gis.chinhphu.vn/ ",
+    "Desc": " map ",
+    "Tag": " ,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 125 ",
+    "Link": " http://graphicdesignjunction.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  graphicdesignjunction.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 126 ",
+    "Link": " http://graphicriver.net/ ",
+    "Desc": " image ",
+    "Tag": " ,  graphic river,  ",
+    "Status": ""
+  },
+  {
+    "No": " 127 ",
+    "Link": " http://gtmetrix.com/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  gtmetrix.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 128 ",
+    "Link": " http://hakim.se/ ",
+    "Desc": " web tool ",
+    "Tag": " css,  CSS3 hakim.se,  ",
+    "Status": ""
+  },
+  {
+    "No": " 129 ",
+    "Link": " http://hcm.24h.com.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  24h,  ",
+    "Status": ""
+  },
+  {
+    "No": " 130 ",
+    "Link": " http://hoanghamobile.com/ ",
+    "Desc": " shopping ",
+    "Tag": " mobile,  hoanghamobile.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 131 ",
+    "Link": " http://hoanlong.com.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  Hoanlong COMPUTER,  ",
+    "Status": ""
+  },
+  {
+    "No": " 132 ",
+    "Link": " http://hoccungdoanhnghiep.vn ",
+    "Desc": " code ",
+    "Tag": " PHP,ASP.NET,  hoccungdoanhnghiep,  ",
+    "Status": ""
+  },
+  {
+    "No": " 133 ",
+    "Link": " http://hoclaptrinhweb.org/ ",
+    "Desc": " code ",
+    "Tag": " PHP,  hoctaptrinhweb,  ",
+    "Status": ""
+  },
+  {
+    "No": " 134 ",
+    "Link": " http://hoctienghoabienhoa.blogspot.com ",
+    "Desc": "  ",
+    "Tag": " ,  hoctienghoabienhoa.blogspot.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 135 ",
+    "Link": " http://horriblesubs.info/ ",
+    "Desc": " movie ",
+    "Tag": " ,  horriblesubs.info,  ",
+    "Status": ""
+  },
+  {
+    "No": " 136 ",
+    "Link": " http://hotrosv.de ",
+    "Desc": " news ",
+    "Tag": " germany,  hotrosv de,  ",
+    "Status": ""
+  },
+  {
+    "No": " 137 ",
+    "Link": " http://hrnavi.com/ ",
+    "Desc": " job ",
+    "Tag": " ,  hrnavi,  ",
+    "Status": ""
+  },
+  {
+    "No": " 138 ",
+    "Link": " http://hshop.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " part,  hshop.vn lkdt,  ",
+    "Status": " Raspberry Pi, Arduino ",
+    "": ""
+  },
+  {
+    "No": " 139 ",
+    "Link": " http://html5maker.com/ ",
+    "Desc": " web tool ",
+    "Tag": " html,  banner html5 make,  ",
+    "Status": ""
+  },
+  {
+    "No": " 140 ",
+    "Link": " http://huzheng.org/ ",
+    "Desc": " file ",
+    "Tag": " dict,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 141 ",
+    "Link": " http://icoconvert.com/ ",
+    "Desc": " web tool ",
+    "Tag": " icon,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 142 ",
+    "Link": " http://ie.microsoft.com/testdrive/graphics/hands-o... ",
+    "Desc": " web tool ",
+    "Tag": " css,  hands-on-css3,  ",
+    "Status": ""
+  },
+  {
+    "No": " 143 ",
+    "Link": " http://imgur.com/ ",
+    "Desc": " image ",
+    "Tag": " ,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 144 ",
+    "Link": " http://infinitysav.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  infinitysav.com magnetic,  ",
+    "Status": ""
+  },
+  {
+    "No": " 145 ",
+    "Link": " http://ioe.go.vn/ ",
+    "Desc": " language ",
+    "Tag": " ,  english olympic,  ",
+    "Status": ""
+  },
+  {
+    "No": " 146 ",
+    "Link": " http://itprotraining.vn ",
+    "Desc": " code ",
+    "Tag": " C#, ASP,  itprotraining,  ",
+    "Status": ""
+  },
+  {
+    "No": " 147 ",
+    "Link": " http://japanesetest4you.com/ ",
+    "Desc": " language ",
+    "Tag": " ,  japanesetest4you.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 148 ",
+    "Link": " http://jlpt.jp/ ",
+    "Desc": " language ",
+    "Tag": " ,  jlpt.jp,  ",
+    "Status": ""
+  },
+  {
+    "No": " 149 ",
+    "Link": " http://jsfiddle.net/ ",
+    "Desc": " code ",
+    "Tag": " js online,  Jsfiddle.net coding online,  ",
+    "Status": ""
+  },
+  {
+    "No": " 150 ",
+    "Link": " http://keepvid.com/ ",
+    "Desc": " web tool ",
+    "Tag": " youtube,  keepvid youtube,  ",
+    "Status": ""
+  },
+  {
+    "No": " 151 ",
+    "Link": " http://kenh14.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  Kênh 14,  ",
+    "Status": ""
+  },
+  {
+    "No": " 152 ",
+    "Link": " http://khiemnguyen.xyz/ ",
+    "Desc": " code ",
+    "Tag": " ASP,  khiem nguyen,  ",
+    "Status": ""
+  },
+  {
+    "No": " 153 ",
+    "Link": " http://khophanmem.vn/ ",
+    "Desc": " app ",
+    "Tag": " ,  khophanmem.n,  ",
+    "Status": ""
+  },
+  {
+    "No": " 154 ",
+    "Link": " http://kimgiavinh.com/ ",
+    "Desc": " shopping ",
+    "Tag": " part,  kim gia vinh,  ",
+    "Status": ""
+  },
+  {
+    "No": " 155 ",
+    "Link": " http://kitsunekko.net/ ",
+    "Desc": " movie ",
+    "Tag": " ,  kitsunekko.net anime sub,  ",
+    "Status": ""
+  },
+  {
+    "No": " 156 ",
+    "Link": " http://lesterchan.net/ ",
+    "Desc": " info ",
+    "Tag": " tech,  lesterchan.net,  ",
+    "Status": ""
+  },
+  {
+    "No": " 157 ",
+    "Link": " http://linhkienchatluong.vn ",
+    "Desc": " shopping ",
+    "Tag": " ,  Linhkienchatluong.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 158 ",
+    "Link": " http://marketingblogonline.com/autobacklinks/ ",
+    "Desc": " web tool ",
+    "Tag": " seo,  SEO Auto 2nd,  ",
+    "Status": ""
+  },
+  {
+    "No": " 159 ",
+    "Link": " http://megaton.uni.me/ ",
+    "Desc": " mysite ",
+    "Tag": " ,  megaton.uni.me,  ",
+    "Status": ""
+  },
+  {
+    "No": " 160 ",
+    "Link": " http://mic.gov.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  BỘ THÔNG TIN VÀ TRUYỀN THÔNG (MIC),  ",
+    "Status": ""
+  },
+  {
+    "No": " 161 ",
+    "Link": " http://mizutiki.com ",
+    "Desc": "  ",
+    "Tag": " ,  mizutiki.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 162 ",
+    "Link": " http://movies.hdviet.com/ ",
+    "Desc": " online fim ",
+    "Tag": " ,  HDviet,  ",
+    "Status": ""
+  },
+  {
+    "No": " 163 ",
+    "Link": " http://my.dot.tk/ ",
+    "Desc": " domain free ",
+    "Tag": " ,  my.dot.tk,  ",
+    "Status": ""
+  },
+  {
+    "No": " 164 ",
+    "Link": " http://napngay.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  BaoKim napngay,  ",
+    "Status": ""
+  },
+  {
+    "No": " 165 ",
+    "Link": " http://ngocson-inspirer.blogspot.com/ ",
+    "Desc": "  ",
+    "Tag": " code,  ngocson-inspirer ARM,  ",
+    "Status": ""
+  },
+  {
+    "No": " 166 ",
+    "Link": " http://ngocthanhmobile.com/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  ngocthanhmobile.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 167 ",
+    "Link": " http://nguoiviettaiuc.com/ ",
+    "Desc": " job ",
+    "Tag": " ,  viec lam o UC,  ",
+    "Status": ""
+  },
+  {
+    "No": " 168 ",
+    "Link": " http://nguyenit.net/ ",
+    "Desc": " code ",
+    "Tag": " ASP.NET,  nguyenit,  ",
+    "Status": "die"
+  },
+  {
+    "No": " 169 ",
+    "Link": " http://nguyentandung.org/ ",
+    "Desc": " news ",
+    "Tag": " ,  nguyentandung.org,  ",
+    "Status": ""
+  },
+  {
+    "No": " 170 ",
+    "Link": " http://o7planning.org ",
+    "Desc": " code ",
+    "Tag": " C#, Android,  O7planning,  ",
+    "Status": ""
+  },
+  {
+    "No": " 171 ",
+    "Link": " http://ogatakasumi.wordpress.com/ ",
+    "Desc": " info ",
+    "Tag": " jap,  ogatakasumi,  ",
+    "Status": ""
+  },
+  {
+    "No": " 172 ",
+    "Link": " http://onepay.com.vn/ ",
+    "Desc": " ecom ",
+    "Tag": " ,  onepay.com.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 173 ",
+    "Link": " http://online.gov.vn/HomePage/Default.aspx ",
+    "Desc": " info ",
+    "Tag": " ,  Site Bo cong thuong,  ",
+    "Status": ""
+  },
+  {
+    "No": " 174 ",
+    "Link": " http://openlinkprofiler.org/ ",
+    "Desc": "  ",
+    "Tag": " ,  openlinkprofiler.org backlink check,  ",
+    "Status": ""
+  },
+  {
+    "No": " 175 ",
+    "Link": " http://ordertaobao.vn/ ",
+    "Desc": " shipper ",
+    "Tag": " ,  ordertaobao.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 176 ",
+    "Link": " http://oviet.net/ ",
+    "Desc": "  ",
+    "Tag": " ,  oviet.net,  ",
+    "Status": ""
+  },
+  {
+    "No": " 177 ",
+    "Link": " http://pdfmag.org/ ",
+    "Desc": " ebook ",
+    "Tag": " ,  pdfmag.org,  ",
+    "Status": ""
+  },
+  {
+    "No": " 178 ",
+    "Link": " http://phamquanglan.name.vn ",
+    "Desc": "  ",
+    "Tag": " ,  phamquanglan,  ",
+    "Status": ""
+  },
+  {
+    "No": " 179 ",
+    "Link": " http://phongcachnhat.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " mobile,  phongcachnhat.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 180 ",
+    "Link": " http://phongvu.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  Phong vu Computer- LK vi tinh,  ",
+    "Status": ""
+  },
+  {
+    "No": " 181 ",
+    "Link": " http://photomania.net/ ",
+    "Desc": " image ",
+    "Tag": " ,  photomania.net img,  ",
+    "Status": ""
+  },
+  {
+    "No": " 182 ",
+    "Link": " http://phpfiddle.org/ ",
+    "Desc": " code online ",
+    "Tag": " test PHP online,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 183 ",
+    "Link": " http://phptester.net/ ",
+    "Desc": " code online ",
+    "Tag": " test PHP online,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 184 ",
+    "Link": " http://quehuongbienhoa.blogspot.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  quehuongbienhoa.blogspot.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 185 ",
+    "Link": " http://raovatbienhoa.net:12096/phpMyAdmin ",
+    "Desc": " web mail ",
+    "Tag": " ,  raovatbienhoa phpMyAdmin,  ",
+    "Status": ""
+  },
+  {
+    "No": " 186 ",
+    "Link": " http://richrap.blogspot.co.uk/ ",
+    "Desc": " diy ",
+    "Tag": " ,  richrap 3D,  ",
+    "Status": ""
+  },
+  {
+    "No": " 187 ",
+    "Link": " http://seo-analysis-tools.com/ ",
+    "Desc": " web tool ",
+    "Tag": " SEO,  seo-analysis-tools.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 188 ",
+    "Link": " http://sinhvienit.net/home/ ",
+    "Desc": " info ",
+    "Tag": " ,  Sinh vien IT,  ",
+    "Status": ""
+  },
+  {
+    "No": " 189 ",
+    "Link": " http://sividuc.org ",
+    "Desc": " news ",
+    "Tag": " germany,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 190 ",
+    "Link": " http://star.zing.vn/ ",
+    "Desc": "  ",
+    "Tag": " ,  karaoke,  ",
+    "Status": ""
+  },
+  {
+    "No": " 191 ",
+    "Link": " http://store.rpc.vn/ ",
+    "Desc": "  ",
+    "Tag": " ,  lkdt store.rpc.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 192 ",
+    "Link": " http://suabeptubienhoa.blogspot.com/ ",
+    "Desc": " mysite ",
+    "Tag": " ,  suabeptubienhoa.blogspot.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 193 ",
+    "Link": " http://themeblack.com/ ",
+    "Desc": " theme ",
+    "Tag": " wp,  themeblack.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 194 ",
+    "Link": " http://themehybrid.com/ ",
+    "Desc": " theme ",
+    "Tag": " wp,  wp themehybrid,  ",
+    "Status": ""
+  },
+  {
+    "No": " 195 ",
+    "Link": " http://thienminhmobile.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  thienminhmobile.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 196 ",
+    "Link": " http://thinknextco.com/diendan/index.php ",
+    "Desc": " forum ",
+    "Tag": " erp,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 197 ",
+    "Link": " http://thuyvk.com ",
+    "Desc": " code ",
+    "Tag": " ASP.NET,  thuyvk,  ",
+    "Status": ""
+  },
+  {
+    "No": " 198 ",
+    "Link": " http://tienganh247.info ",
+    "Desc": " language ",
+    "Tag": " english,  tienganh247,  ",
+    "Status": ""
+  },
+  {
+    "No": " 199 ",
+    "Link": " http://tigerairway.vn/ ",
+    "Desc": "  ",
+    "Tag": " ,  tigerairway.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 200 ",
+    "Link": " http://tools.pingdom.com/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  pingdom.com web meter,  ",
+    "Status": ""
+  },
+  {
+    "No": " 201 ",
+    "Link": " http://tormovies.org/ ",
+    "Desc": " online fim ",
+    "Tag": " ,  tormovies.org,  ",
+    "Status": ""
+  },
+  {
+    "No": " 202 ",
+    "Link": " http://tuoitre.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  Tuổi trẻ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 203 ",
+    "Link": " http://tvtructuyen.net/ ",
+    "Desc": "  ",
+    "Tag": " ,  tvtructuyen.net,  ",
+    "Status": ""
+  },
+  {
+    "No": " 204 ",
+    "Link": " http://validator.w3.org/check?uri=http%3A%2F%2Fwww... ",
+    "Desc": " web tool ",
+    "Tag": " seo,  SEO validator.w3.org,  ",
+    "Status": ""
+  },
+  {
+    "No": " 205 ",
+    "Link": " http://vieclamdongnai.net ",
+    "Desc": " job ",
+    "Tag": " ,  vieclamdongnai,  ",
+    "Status": ""
+  },
+  {
+    "No": " 206 ",
+    "Link": " http://vietjack.com ",
+    "Desc": " code ",
+    "Tag": " C#, Java, nodejs,  vietjack,  ",
+    "Status": ""
+  },
+  {
+    "No": " 207 ",
+    "Link": " http://vietmoz.net/ ",
+    "Desc": " web tool ",
+    "Tag": " SEO,  vietmoz.net seo,  ",
+    "Status": ""
+  },
+  {
+    "No": " 208 ",
+    "Link": " http://vietteltelecom.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  Vietteltelecom,  ",
+    "Status": ""
+  },
+  {
+    "No": " 209 ",
+    "Link": " http://vldongnai.vieclamvietnam.gov.vn/ ",
+    "Desc": " job ",
+    "Tag": " job vn,  VL Dong Nai,  ",
+    "Status": ""
+  },
+  {
+    "No": " 210 ",
+    "Link": " http://vmphuc.blogspot.com/ ",
+    "Desc": " mysite ",
+    "Tag": " ,  vmphuc.blogspot.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 211 ",
+    "Link": " http://vnexpress.net/ ",
+    "Desc": " info ",
+    "Tag": " ,  VN Express,  ",
+    "Status": ""
+  },
+  {
+    "No": " 212 ",
+    "Link": " http://webdien.com ",
+    "Desc": " forum ",
+    "Tag": " ,  WEB DIEN,  ",
+    "Status": ""
+  },
+  {
+    "No": " 213 ",
+    "Link": " http://whobis.com/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  whobis.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 214 ",
+    "Link": " http://wiki.matbao.net ",
+    "Desc": " wiki ",
+    "Tag": " web,  matbao wiki,  ",
+    "Status": ""
+  },
+  {
+    "No": " 215 ",
+    "Link": " http://www.000webhost.com/ ",
+    "Desc": " hosting free ",
+    "Tag": " ,  000 webhost,  ",
+    "Status": ""
+  },
+  {
+    "No": " 216 ",
+    "Link": " http://www.1pagerank.com/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  1pagerank.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 217 ",
+    "Link": " http://www.3dcontentcentral.com/ ",
+    "Desc": " 3D thing ",
+    "Tag": " ,  3dcontentcentral.com 3D model,  ",
+    "Status": ""
+  },
+  {
+    "No": " 218 ",
+    "Link": " http://www.aakashweb.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  aakashweb.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 219 ",
+    "Link": " http://www.abc.net.au/news/ ",
+    "Desc": " news ",
+    "Tag": " australia,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 220 ",
+    "Link": " http://www.addurl.nu/ ",
+    "Desc": " web tool ",
+    "Tag": " back link,  addurl.nu Backlink,  ",
+    "Status": ""
+  },
+  {
+    "No": " 221 ",
+    "Link": " http://www.aliexpress.com/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  aliexpress,  ",
+    "Status": ""
+  },
+  {
+    "No": " 222 ",
+    "Link": " http://www.animelyrics.com/index.php ",
+    "Desc": " music down ",
+    "Tag": " ,  animelyrics.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 223 ",
+    "Link": " http://www.archerpoint.com/blog/ap-how-to-blog ",
+    "Desc": " ebook ",
+    "Tag": " Dynamic NAV,  archer point,  ",
+    "Status": ""
+  },
+  {
+    "No": " 224 ",
+    "Link": " http://www.a-zmanga.net/ ",
+    "Desc": " movie ",
+    "Tag": " ,  www.a-zmanga.net,  ",
+    "Status": ""
+  },
+  {
+    "No": " 225 ",
+    "Link": " http://www.baodongnai.com.vn/ ",
+    "Desc": " news ",
+    "Tag": " ,  Bao Dong nai,  ",
+    "Status": ""
+  },
+  {
+    "No": " 226 ",
+    "Link": " http://www.baomoi.com/ ",
+    "Desc": " info ",
+    "Tag": " ,  Báo Mới,  ",
+    "Status": ""
+  },
+  {
+    "No": " 227 ",
+    "Link": " http://www.bienhoa-dongnai.gov.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  bienhoa-dongnai.gov.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 228 ",
+    "Link": " http://www.bienhoapower.com ",
+    "Desc": " info ",
+    "Tag": " ,  lich cat dien bien hoa,  ",
+    "Status": ""
+  },
+  {
+    "No": " 229 ",
+    "Link": " http://www.bloggerthemes.net/ ",
+    "Desc": "  ",
+    "Tag": " ,  bloggerthemes,  ",
+    "Status": ""
+  },
+  {
+    "No": " 230 ",
+    "Link": " http://www.businessknowledgesource.com/ ",
+    "Desc": " e-school ",
+    "Tag": " ,  business knowledge,  ",
+    "Status": ""
+  },
+  {
+    "No": " 231 ",
+    "Link": " http://www.casio-b2b.com ",
+    "Desc": " tech tool ",
+    "Tag": " barcode reader,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 232 ",
+    "Link": " http://www.chipviet.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  lkdt chipviet.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 233 ",
+    "Link": " http://www.clbmohinh.com/ ",
+    "Desc": " hobby ",
+    "Tag": " ,  www.clbmohinh.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 234 ",
+    "Link": " http://www.code30s.com ",
+    "Desc": " code ",
+    "Tag": " C#,  code30s,  ",
+    "Status": ""
+  },
+  {
+    "No": " 235 ",
+    "Link": " http://www.congan.com.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  congan.com.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 236 ",
+    "Link": " http://www.darkknightarmoury.com/ ",
+    "Desc": " hobby ",
+    "Tag": " ,  darkknightarmoury.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 237 ",
+    "Link": " http://www.daynghetuannguyen.com/ ",
+    "Desc": "  ",
+    "Tag": " hobby,  daynghetuannguyen.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 238 ",
+    "Link": " http://www.dienmay.com/ ",
+    "Desc": " shopping ",
+    "Tag": " home,  Dien may.com- DT, Laptop,  ",
+    "Status": ""
+  },
+  {
+    "No": " 239 ",
+    "Link": " http://www.doityourselfgadgets.com/p/coilgun-knowl... ",
+    "Desc": " diy ",
+    "Tag": " ,  doityourselfgadgets.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 240 ",
+    "Link": " http://www.dongdu.edu.vn ",
+    "Desc": " language ",
+    "Tag": " ,  Nhat ngu Dong du,  ",
+    "Status": ""
+  },
+  {
+    "No": " 241 ",
+    "Link": " http://www.dongnai.gov.vn/Pages/Home.aspx ",
+    "Desc": " info ",
+    "Tag": " ,  Dong Nai Gov,  ",
+    "Status": ""
+  },
+  {
+    "No": " 242 ",
+    "Link": " http://www.e-learning.vn/KHTN/Pages/Home.aspx ",
+    "Desc": " e-school ",
+    "Tag": " ,  Hoc tu xa - KHTN,  ",
+    "Status": ""
+  },
+  {
+    "No": " 243 ",
+    "Link": " http://www.esuhai.com ",
+    "Desc": " job ",
+    "Tag": " ,  esuhai.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 244 ",
+    "Link": " http://www.facebook.com/ ",
+    "Desc": " FB ",
+    "Tag": " ,  Facebook,  ",
+    "Status": ""
+  },
+  {
+    "No": " 245 ",
+    "Link": " http://www.freelancer.com/ ",
+    "Desc": " freelancer ",
+    "Tag": " ,  freelancer.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 246 ",
+    "Link": " http://www.free-ocr.com/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  free-ocr,  ",
+    "Status": ""
+  },
+  {
+    "No": " 247 ",
+    "Link": " http://www.freeroms.com/ ",
+    "Desc": " game down ",
+    "Tag": " ,  Game freeroms,  ",
+    "Status": ""
+  },
+  {
+    "No": " 248 ",
+    "Link": " http://www.freshdesignweb.com/category/tutorials ",
+    "Desc": " web tool ",
+    "Tag": " ,  freshdesignweb.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 249 ",
+    "Link": " http://www.gamestorrents.com/ ",
+    "Desc": " game down ",
+    "Tag": " torrent,  gamestorrents.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 250 ",
+    "Link": " http://www.getrank.org/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  getrank.org,  ",
+    "Status": ""
+  },
+  {
+    "No": " 251 ",
+    "Link": " http://www.goethe.de ",
+    "Desc": " news ",
+    "Tag": " germany,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 252 ",
+    "Link": " http://www.google.com/analytics/ ",
+    "Desc": "  ",
+    "Tag": " ,  Google Analytics,  ",
+    "Status": ""
+  },
+  {
+    "No": " 253 ",
+    "Link": " http://www.hanviet.org/ ",
+    "Desc": " language ",
+    "Tag": " ,  Tu dien Han Viet,  ",
+    "Status": ""
+  },
+  {
+    "No": " 254 ",
+    "Link": " http://www.histats.com/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  histats.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 255 ",
+    "Link": " http://www.hnammobile.com/ ",
+    "Desc": " shopping ",
+    "Tag": " mobile,  hnammobile.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 256 ",
+    "Link": " http://www.hobbyist.co.nz/ ",
+    "Desc": " diy ",
+    "Tag": " ,  http://www.hobbyist.co.nz/,  ",
+    "Status": ""
+  },
+  {
+    "No": " 257 ",
+    "Link": " http://www.hopgiangorder.com.vn/ ",
+    "Desc": " shipper ",
+    "Tag": " ,  mua hang TQ 01,  ",
+    "Status": ""
+  },
+  {
+    "No": " 258 ",
+    "Link": " http://www.hostinger.vn/ ",
+    "Desc": " hosting free ",
+    "Tag": " ,  Hostinger VN,  ",
+    "Status": ""
+  },
+  {
+    "No": " 259 ",
+    "Link": " http://www.icoconverter.com/ ",
+    "Desc": " web tool ",
+    "Tag": " icon,  icoconverter.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 260 ",
+    "Link": " http://www.inlogo.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  inlogo.vn huyhieu,  ",
+    "Status": ""
+  },
+  {
+    "No": " 261 ",
+    "Link": " http://www.instructables.com/ ",
+    "Desc": " wiki ",
+    "Tag": " ,  DO IT your self,  ",
+    "Status": ""
+  },
+  {
+    "No": " 262 ",
+    "Link": " http://www.isitdownrightnow.com/ ",
+    "Desc": " web tool ",
+    "Tag": " check online,  I sit down right now,  ",
+    "Status": ""
+  },
+  {
+    "No": " 263 ",
+    "Link": " http://www.java2s.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  android samples code,  ",
+    "Status": ""
+  },
+  {
+    "No": " 264 ",
+    "Link": " http://www.laivanduc.com ",
+    "Desc": " code ",
+    "Tag": " WP,  laivanduc,  ",
+    "Status": ""
+  },
+  {
+    "No": " 265 ",
+    "Link": " http://www.machsupport.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  MACH 3,  ",
+    "Status": ""
+  },
+  {
+    "No": " 266 ",
+    "Link": " http://www.make-it-in-germany.vn ",
+    "Desc": " news ",
+    "Tag": " germany,  make it german,  ",
+    "Status": ""
+  },
+  {
+    "No": " 267 ",
+    "Link": " http://www.mcafee.com/apps/downloads/security-upda... ",
+    "Desc": "  ",
+    "Tag": " ,  Mcafee DAT download,  ",
+    "Status": ""
+  },
+  {
+    "No": " 268 ",
+    "Link": " http://www.medievalcollectibles.com/ ",
+    "Desc": " hobby ",
+    "Tag": " ,  medievalcollectibles.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 269 ",
+    "Link": " http://www.mindtools.com/ ",
+    "Desc": " e-school ",
+    "Tag": " ,  Mind Tools,  ",
+    "Status": ""
+  },
+  {
+    "No": " 270 ",
+    "Link": " http://www.neurotechnology.com ",
+    "Desc": "  ",
+    "Tag": " ,  neurotechnology,  ",
+    "Status": ""
+  },
+  {
+    "No": " 271 ",
+    "Link": " http://www.nguyenkim.com/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  Nguyen Kim - DT, Laptop,  ",
+    "Status": ""
+  },
+  {
+    "No": " 272 ",
+    "Link": " http://www.nhaphang247.com/ ",
+    "Desc": " shipper ",
+    "Tag": " ,  nhaphang247,  ",
+    "Status": ""
+  },
+  {
+    "No": " 273 ",
+    "Link": " http://www.nhattaoonline.com ",
+    "Desc": " shopping ",
+    "Tag": " ,  Nhat tao Online - LK dien tu,  ",
+    "Status": ""
+  },
+  {
+    "No": " 274 ",
+    "Link": " http://www.noip.gov.vn/web/noip/home/vn?proxyUrl=/... ",
+    "Desc": " info ",
+    "Tag": " ,  cuc so huu tri tue,  ",
+    "Status": ""
+  },
+  {
+    "No": " 275 ",
+    "Link": " http://www.numberingplans.com/?page=analysis&sub=i... ",
+    "Desc": " web tool ",
+    "Tag": " IMEI,  IMEI lookup,  ",
+    "Status": ""
+  },
+  {
+    "No": " 276 ",
+    "Link": " http://www.nyaa.se/ ",
+    "Desc": " movie ",
+    "Tag": " ,  nyaa.se anime,  ",
+    "Status": ""
+  },
+  {
+    "No": " 277 ",
+    "Link": " http://www.okindir.tk/ ",
+    "Desc": " game down ",
+    "Tag": " ok.ru down clip,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 278 ",
+    "Link": " http://www.opensiteexplorer.org/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  OpenSiteExplorer.org,  ",
+    "Status": ""
+  },
+  {
+    "No": " 279 ",
+    "Link": " http://www.orangepi.org/ ",
+    "Desc": " diy ",
+    "Tag": " pi,  orangepi.org,  ",
+    "Status": ""
+  },
+  {
+    "No": " 280 ",
+    "Link": " http://www.pcbienhoa.com/ ",
+    "Desc": " shopping ",
+    "Tag": " pc, laptop,  PC Bien hoa - LK vi tinh,  ",
+    "Status": ""
+  },
+  {
+    "No": " 281 ",
+    "Link": " http://www.pcdongnai.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  Dien luc Dong Nai,  ",
+    "Status": ""
+  },
+  {
+    "No": " 282 ",
+    "Link": " http://www.pcdongnai.vn/D%E1%BB%8Bch-v%E1%BB%A5-tr%E1%BB%B1c-tuy%E1%BA%BFn/L%E1%BB%8Bch-ng%E1%BB%ABng-cung-c%E1%BA%A5p-%C4%91i%E1%BB%87n ",
+    "Desc": " news ",
+    "Tag": " outage,  pcdongnai,  ",
+    "Status": ""
+  },
+  {
+    "No": " 283 ",
+    "Link": " http://www.picfull.com/ ",
+    "Desc": " image vector free ",
+    "Tag": " ,  picfull,  ",
+    "Status": ""
+  },
+  {
+    "No": " 284 ",
+    "Link": " http://www.prchecker.info/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  SEO prchecker.info,  ",
+    "Status": ""
+  },
+  {
+    "No": " 285 ",
+    "Link": " http://www.problogdesign.com/tag/wordpress/ ",
+    "Desc": " code ",
+    "Tag": " wordpress,  problogdesing,  ",
+    "Status": ""
+  },
+  {
+    "No": " 286 ",
+    "Link": " http://www.prudential.com.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  Prudential vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 287 ",
+    "Link": " http://www.raovatbienhoa.net ",
+    "Desc": " mysite ",
+    "Tag": " ,  raovatbienhoa.net,  ",
+    "Status": ""
+  },
+  {
+    "No": " 288 ",
+    "Link": " http://www.raovatbienhoa.net:12095/webmail/src/web... ",
+    "Desc": " web mail ",
+    "Tag": " ,  RVBH mail,  ",
+    "Status": ""
+  },
+  {
+    "No": " 289 ",
+    "Link": " http://www.registry.cu.cc/ ",
+    "Desc": " domain free ",
+    "Tag": " ,  CU.CC,  ",
+    "Status": ""
+  },
+  {
+    "No": " 290 ",
+    "Link": " http://www.repetier.com/ ",
+    "Desc": " diy ",
+    "Tag": " ,  repetier.com soft3d,  ",
+    "Status": ""
+  },
+  {
+    "No": " 291 ",
+    "Link": " http://www.roboconshop.com ",
+    "Desc": " shopping ",
+    "Tag": " part,  ROBOCON SHOP,  ",
+    "Status": ""
+  },
+  {
+    "No": " 292 ",
+    "Link": " http://www.saromalang.com/ ",
+    "Desc": " language ",
+    "Tag": " ,  saromalang,  ",
+    "Status": ""
+  },
+  {
+    "No": " 293 ",
+    "Link": " http://www.seobility.net/ ",
+    "Desc": " web tool ",
+    "Tag": " SEO,  seobility.net,  ",
+    "Status": ""
+  },
+  {
+    "No": " 294 ",
+    "Link": " http://www.seoserp.com/fast.way.get.index/ ",
+    "Desc": " web tool ",
+    "Tag": " seo,  SEO Auto 1st,  ",
+    "Status": ""
+  },
+  {
+    "No": " 295 ",
+    "Link": " http://www.sgvisa.org/ ",
+    "Desc": "  ",
+    "Tag": " ,  sgvisa,  ",
+    "Status": ""
+  },
+  {
+    "No": " 296 ",
+    "Link": " http://www.shareasale.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  SHARE A SALE,  ",
+    "Status": ""
+  },
+  {
+    "No": " 297 ",
+    "Link": " http://www.shinhan.com.vn/ ",
+    "Desc": " bank ",
+    "Tag": " ,  shinhan,  ",
+    "Status": ""
+  },
+  {
+    "No": " 298 ",
+    "Link": " http://www.socialmaximizer.com/index-lp.php ",
+    "Desc": " web tool ",
+    "Tag": " seo,  SEO socialmaximizer.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 299 ",
+    "Link": " http://www.sovilaco.com.vn ",
+    "Desc": " job ",
+    "Tag": " ,  sovilaco.com.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 300 ",
+    "Link": " http://www.sqlfiddle.com ",
+    "Desc": " code online ",
+    "Tag": " test SQL,  sqlfiddle,  ",
+    "Status": ""
+  },
+  {
+    "No": " 301 ",
+    "Link": " http://www.stafaband.info/ ",
+    "Desc": "  ",
+    "Tag": " ,  http://www.stafaband.info/,  ",
+    "Status": ""
+  },
+  {
+    "No": " 302 ",
+    "Link": " http://www.studyjapanese.net/ ",
+    "Desc": " language ",
+    "Tag": " ,  studyjapanese,  ",
+    "Status": ""
+  },
+  {
+    "No": " 303 ",
+    "Link": " http://www.swordsandarmor.com/ ",
+    "Desc": " hobby ",
+    "Tag": " ,  swordsandarmor.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 304 ",
+    "Link": " http://www.tanos.co.uk/ ",
+    "Desc": " language ",
+    "Tag": " ,  www.tanos.co.uk japanese,  ",
+    "Status": ""
+  },
+  {
+    "No": " 305 ",
+    "Link": " http://www.tech24.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  Tech24,  ",
+    "Status": ""
+  },
+  {
+    "No": " 306 ",
+    "Link": " http://www.template1st.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  template1st.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 307 ",
+    "Link": " http://www.textmagic.com/ ",
+    "Desc": " web tool ",
+    "Tag": " sms,  Textmagic SMS,  ",
+    "Status": ""
+  },
+  {
+    "No": " 308 ",
+    "Link": " http://www.thegioicnc.com ",
+    "Desc": "  ",
+    "Tag": " ,  THE GIOI CNC - CO KHI,  ",
+    "Status": ""
+  },
+  {
+    "No": " 309 ",
+    "Link": " http://www.thegioididong.com/ ",
+    "Desc": " shopping ",
+    "Tag": " mobile,  The gioi di dong.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 310 ",
+    "Link": " http://www.thingiverse.com/ ",
+    "Desc": " 3D thing ",
+    "Tag": " ,  thingiverse.com 3D thing,  ",
+    "Status": ""
+  },
+{
+    "No": " 311 ",
+    "Link": " http://www.tinhte.vn/ ",
+    "Desc": " news ",
+    "Tag": " ,  Tinh tế,  ",
+    "Status": ""
+  },
+  {
+    "No": " 312 ",
+    "Link": " http://www.tivi24h.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  Tivi24h,  ",
+    "Status": ""
+  },
+  {
+    "No": " 313 ",
+    "Link": " http://www.tme.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " part,  DIEN TU THIEN MINH - LK dien tu,  ",
+    "Status": ""
+  },
+  {
+    "No": " 314 ",
+    "Link": " http://www.tutorialsteacher.com ",
+    "Desc": " code ",
+    "Tag": " C#,  tutorialsteacher,  ",
+    "Status": ""
+  },
+  {
+    "No": " 315 ",
+    "Link": " http://www.vatgia.com/battery_laptop ",
+    "Desc": "  ",
+    "Tag": " ,  quoc thang lkmt,  ",
+    "Status": ""
+  },
+  {
+    "No": " 316 ",
+    "Link": " http://www.vecteezy.com/ ",
+    "Desc": " image vector free ",
+    "Tag": " ,  vecteezy.com img,  ",
+    "Status": ""
+  },
+  {
+    "No": " 317 ",
+    "Link": " http://www.vinacomm.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " part,  VINACOMM - thiet bi da dung,  ",
+    "Status": ""
+  },
+  {
+    "No": " 318 ",
+    "Link": " http://www.vinaphone.com.vn/ ",
+    "Desc": " info ",
+    "Tag": " ,  Vinaphone,  ",
+    "Status": ""
+  },
+  {
+    "No": " 319 ",
+    "Link": " http://www.vlance.vn ",
+    "Desc": " freelancer ",
+    "Tag": " ,  vlance.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 320 ",
+    "Link": " http://www.vnit-club.com/ ",
+    "Desc": "  ",
+    "Tag": " ,  vnit-club,  ",
+    "Status": ""
+  },
+ {
+    "No": " 321 ",
+    "Link": " http://www.vnjpclub.com/ ",
+    "Desc": " language ",
+    "Tag": " ,  vnjpclub japan,  ",
+    "Status": ""
+  },
+  {
+    "No": " 322 ",
+    "Link": " http://www.w3schools.com/ ",
+    "Desc": " wiki ",
+    "Tag": " ,  W3 SCHOOL,  ",
+    "Status": ""
+  },
+  {
+    "No": " 323 ",
+    "Link": " http://www.watermark-images.com/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  watermark-images,  ",
+    "Status": ""
+  },
+  {
+    "No": " 324 ",
+    "Link": " http://www.webestools.com/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  webestools.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 325 ",
+    "Link": " http://www.webpagetest.org/ ",
+    "Desc": " test web ",
+    "Tag": " test speed,  web page test,  ",
+    "Status": ""
+  },
+  {
+    "No": " 326 ",
+    "Link": " http://www.woorank.com/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  WOOrank,  ",
+    "Status": ""
+  },
+  {
+    "No": " 327 ",
+    "Link": " http://www.wpbeginner.com ",
+    "Desc": " code ",
+    "Tag": " wp,  wpbeginner,  ",
+    "Status": ""
+  },
+  {
+    "No": " 328 ",
+    "Link": " http://www.wplocker.com/ ",
+    "Desc": " theme ",
+    "Tag": " wp,  WP Locker,  ",
+    "Status": ""
+  },
+  {
+    "No": " 329 ",
+    "Link": " http://www.xe.com/currencyconverter/# ",
+    "Desc": " web tool ",
+    "Tag": " ,  currencyconverter XE,  ",
+    "Status": ""
+  },
+  {
+    "No": " 330 ",
+    "Link": " http://www.yiiframework.com/ ",
+    "Desc": " code ",
+    "Tag": " php frame work,  yii php frame,  ",
+    "Status": ""
+  },
+   {
+    "No": " 331 ",
+    "Link": " http://www.youtube.com/?hl=vi ",
+    "Desc": "  ",
+    "Tag": " ,  Youtube,  ",
+    "Status": ""
+  },
+  {
+    "No": " 332 ",
+    "Link": " http://www.ziddu.com/ ",
+    "Desc": " hoc toan ",
+    "Tag": " ,  ziddu.com DATA,  ",
+    "Status": ""
+  },
+  {
+    "No": " 333 ",
+    "Link": " http://www3.nhk.or.jp/news/easy/ ",
+    "Desc": " news ",
+    "Tag": " ,  NHK NEWS Easy,  ",
+    "Status": ""
+  },
+  {
+    "No": " 334 ",
+    "Link": " http://www3.nhk.or.jp/news/index.html ",
+    "Desc": " news ",
+    "Tag": " ,  NHK NEWS,  ",
+    "Status": ""
+  },
+  {
+    "No": " 335 ",
+    "Link": " http://yuricalife.tumblr.com/ ",
+    "Desc": " info ",
+    "Tag": " jap,  yuricalife.tumblr.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 336 ",
+    "Link": " https://adf.ly/ ",
+    "Desc": " short link ",
+    "Tag": " ,  ADF.LY,  ",
+    "Status": ""
+  },
+  {
+    "No": " 337 ",
+    "Link": " https://aframe.io ",
+    "Desc": " web tool ",
+    "Tag": " VR,  aframe.io vr web code,  ",
+    "Status": ""
+  },
+  {
+    "No": " 338 ",
+    "Link": " https://ahrefs.com ",
+    "Desc": " web tool ",
+    "Tag": " seo,  ahrefs.com Backlink check,  ",
+    "Status": ""
+  },
+  {
+    "No": " 339 ",
+    "Link": " https://blockchain.info/stats ",
+    "Desc": " bitcoin ",
+    "Tag": " bitcoin stat,  blockchain,  ",
+    "Status": ""
+  },
+  {
+    "No": " 340 ",
+    "Link": " https://blogtienao.com ",
+    "Desc": " bitcoin ",
+    "Tag": " bitcoin,  blogtienao,  ",
+    "Status": ""
+  },
+  {
+    "No": " 341 ",
+    "Link": " https://code.google.com/apis/console/?pli=1 ",
+    "Desc": " code ",
+    "Tag": " ,  Google API console,,  ",
+    "Status": ""
+  },
+  {
+    "No": " 342 ",
+    "Link": " https://code4shares.wordpress.com ",
+    "Desc": " code ",
+    "Tag": " AI,  code4shares,  ",
+    "Status": ""
+  },
+  {
+    "No": " 343 ",
+    "Link": " https://community.dynamics.com/ ",
+    "Desc": " forum ",
+    "Tag": " Dynamic NAV,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 344 ",
+    "Link": " https://console.developers.google.com/apis ",
+    "Desc": " API ",
+    "Tag": " google,  ,  ",
+    "Status": ""
+  },
+ 
+    {
+    "No": " 345 ",
+    "Link": " https://console.dialogflow.com ",
+    "Desc": " code ",
+    "Tag": " A.I dialog,  Api.ai,  ",
+    "Status": ""
+  },
+  {
+    "No": " 346 ",
+    "Link": " https://coursmos.com/ ",
+    "Desc": " e-school ",
+    "Tag": " code,  Coursmos,  ",
+    "Status": ""
+  },
+  {
+    "No": " 347 ",
+    "Link": " https://curious.com/ ",
+    "Desc": " e-school ",
+    "Tag": " everything,  curious,  ",
+    "Status": ""
+  },
+   {
+    "No": " 348 ",
+    "Link": " https://dashboard.tawk.to",
+    "Desc": " web tool ",
+    "Tag": " ,  tawk to,  ",
+    "Status": ""
+  },
+  
+  {
+    "No": " 349 ",
+    "Link": " https://dev.skype.com/ ",
+    "Desc": " API ",
+    "Tag": " ,  skype dev,  ",
+    "Status": ""
+  },
+  {
+    "No": " 350 ",
+    "Link": " https://developer.android.com/samples/index.html ",
+    "Desc": " code ",
+    "Tag": " ,  Code android samples,  ",
+    "Status": ""
+  },
+   {
+    "No": " 351 ",
+    "Link": " https://developers.facebook.com/docs/plugins ",
+    "Desc": " code ",
+    "Tag": " fb,  Facebook Plugin,  ",
+    "Status": ""
+  },
+  {
+    "No": " 352 ",
+    "Link": " https://developers.google.com/+/ ",
+    "Desc": " code ",
+    "Tag": " google,  Google Plugin,  ",
+    "Status": ""
+  },
+  {
+    "No": " 353 ",
+    "Link": " https://developers.google.com/speed/pagespeed/insights/ ",
+    "Desc": " web tool ",
+    "Tag": " speed test,  google dev,  ",
+    "Status": ""
+  },
+  {
+    "No": " 354 ",
+    "Link": " https://developers.viber.com/ ",
+    "Desc": " API ",
+    "Tag": " ,  viber dev,  ",
+    "Status": ""
+  },
+  {
+    "No": " 355 ",
+    "Link": " https://developers.zalo.me/ ",
+    "Desc": " API ",
+    "Tag": " ,  zalo dev,  ",
+    "Status": ""
+  },
+  {
+    "No": " 356 ",
+    "Link": " https://docs.google.com/forms/u/0/ ",
+    "Desc": " web tool ",
+    "Tag": " form,  google form,  ",
+    "Status": ""
+  },
+  {
+    "No": " 357 ",
+    "Link": " https://dotnetfiddle.net/ ",
+    "Desc": " code online ",
+    "Tag": " test C# online,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 358 ",
+    "Link": " https://drive.google.com ",
+    "Desc": " cloud ",
+    "Tag": " ,  Google drive,  ",
+    "Status": ""
+  },
+  {
+    "No": " 359 ",
+    "Link": " https://duyanhpham.wordpress.com ",
+    "Desc": " code ",
+    "Tag": " Dotnetnuke,  duyanhpham, web ",
+    "Status": ""
+  },
+  {
+    "No": " 360 ",
+    "Link": " https://dynamicsuser.net/nav/ ",
+    "Desc": " forum ",
+    "Tag": " Dynamic NAV, elearn ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 361 ",
+    "Link": " https://ethereum.org ",
+    "Desc": " bitcoin ",
+    "Tag": " ethereum,  crypto currency,  ",
+    "Status": ""
+  },
+  {
+    "No": " 362 ",
+    "Link": " https://experiments.withgoogle.com/ ",
+    "Desc": " info ",
+    "Tag": " experiment,  experiments withgoogle,  ",
+    "Status": ""
+  },
+  {
+    "No": " 363 ",
+    "Link": " https://freetuts.net ",
+    "Desc": " code ",
+    "Tag": " PHP,  freetuts, elearn  ",
+    "Status": ""
+  },
+  {
+    "No": " 364 ",
+    "Link": " https://gamepciso.com ",
+    "Desc": " game down ",
+    "Tag": " ,  gamepciso.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 365 ",
+    "Link": " https://github.com ",
+    "Desc": " code ",
+    "Tag": " rrr,  git hub,  ",
+    "Status": ""
+  },
+  {
+    "No": " 366 ",
+    "Link": " https://gitter.im/FreeCodeCamp/FreeCodeCamp ",
+    "Desc": " forum ",
+    "Tag": " ,  elearn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 367 ",
+    "Link": " https://gpldl.com ",
+    "Desc": " theme ",
+    "Tag": " wp,  gpldl.com wp theme,  ",
+    "Status": ""
+  },
+  {
+    "No": " 368 ",
+    "Link": " https://grabcad.com/ ",
+    "Desc": " 3D thing ",
+    "Tag": " ,  grabcad.com 3d model,  ",
+    "Status": ""
+  },
+  {
+    "No": " 369 ",
+    "Link": " https://gtmetrix.com ",
+    "Desc": " test web ",
+    "Tag": " test speed,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 370 ",
+    "Link": " https://hoctiengnhatcungakira.wordpress.com ",
+    "Desc": " language ",
+    "Tag": " ,  nhat ban, japan ",
+    "Status": ""
+  },
+  {
+    "No": " 371 ",
+    "Link": " https://jqueryhouse.com ",
+    "Desc": " code ",
+    "Tag": " jquery,  jqueryhouse.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 372 ",
+    "Link": " https://jsfiddle.net/ ",
+    "Desc": " code ",
+    "Tag": " testside java html,  jsfiddle,  ",
+    "Status": ""
+  },
+  {
+    "No": " 373 ",
+    "Link": " https://kat.cr/ ",
+    "Desc": "  ",
+    "Tag": " ,  kat.cr torrent,  ",
+    "Status": ""
+  },
+  {
+    "No": " 374 ",
+    "Link": " https://learnenglish.britishcouncil.org/en/busines... ",
+    "Desc": " language ",
+    "Tag": " ,  english postcard,  ",
+    "Status": ""
+  },
+  {
+    "No": " 375 ",
+    "Link": " https://loadimpact.com/ ",
+    "Desc": " test web ",
+    "Tag": " test speed,  load impact,  ",
+    "Status": ""
+  },
+  {
+    "No": " 376 ",
+    "Link": " https://machinelearningcoban.com ",
+    "Desc": " code ",
+    "Tag": " AI, ML,  machinelearningcoban,  ",
+    "Status": ""
+  },
+  {
+    "No": " 377 ",
+    "Link": " https://mapcreator.here.com ",
+    "Desc": "  ",
+    "Tag": " ,  mapcreator.here.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 378 ",
+    "Link": " https://maps.google.com/ ",
+    "Desc": " map ",
+    "Tag": " ,  Google Map,  ",
+    "Status": ""
+  },
+  {
+    "No": " 379 ",
+    "Link": " https://mega.co.nz/ ",
+    "Desc": " cloud ",
+    "Tag": " ,  drive data,  ",
+    "Status": ""
+  },
+  {
+    "No": " 380 ",
+    "Link": " https://megacode.vn ",
+    "Desc": " code ",
+    "Tag": " source code,  megacode.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 381 ",
+    "Link": " https://meleak.wordpress.com/ ",
+    "Desc": " code ",
+    "Tag": " C# -wpf,  meleak,  ",
+    "Status": ""
+  },
+  {
+    "No": " 382 ",
+    "Link": " https://mitseu.wordpress.com/c-net/ ",
+    "Desc": " code ",
+    "Tag": " C#,  mitseu,  ",
+    "Status": ""
+  },
+  {
+    "No": " 383 ",
+    "Link": " https://moz.com ",
+    "Desc": " web tool ",
+    "Tag": " SEO,  MOZ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 384 ",
+    "Link": " https://msdn.microsoft.com/en-us/library/jj672859(... ",
+    "Desc": "  ",
+    "Tag": " ,  NAV 2016 Help,  ",
+    "Status": ""
+  },
+  {
+    "No": " 385 ",
+    "Link": " https://msdn.microsoft.com/magazine/msdn-magazine-issues ",
+    "Desc": " ebook ",
+    "Tag": " code mag,  MSDN,  ",
+    "Status": ""
+  },
+  {
+    "No": " 386 ",
+    "Link": " https://nguyentieuhau.wordpress.com ",
+    "Desc": " code ",
+    "Tag": " Linux - Ubuntu,  nguyentienhau,  ",
+    "Status": ""
+  },
+  {
+    "No": " 387 ",
+    "Link": " https://nhatkyhoctap.blogspot.com ",
+    "Desc": " code ",
+    "Tag": " ASP MVC,  nhat ky hoc tap, elearn  ",
+    "Status": ""
+  },
+  {
+    "No": " 388 ",
+    "Link": " https://ocw.mit.edu/index.htm ",
+    "Desc": " code ",
+    "Tag": " ,  ocw mit,  ",
+    "Status": ""
+  },
+  {
+    "No": " 389 ",
+    "Link": " https://pentest-tools.com ",
+    "Desc": " web tool ",
+    "Tag": " test sercurity,  pentest tools,  ",
+    "Status": ""
+  },
+  {
+    "No": " 390 ",
+    "Link": " https://pixabay.com/ ",
+    "Desc": " image ",
+    "Tag": " ,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 391 ",
+    "Link": " https://python-xy.github.io ",
+    "Desc": " code ",
+    "Tag": " code editor,  python xy,  ",
+    "Status": ""
+  },
+  {
+    "No": " 392 ",
+    "Link": " https://scratch.mit.edu ",
+    "Desc": " e-school ",
+    "Tag": " teach child coding,  scratch, elearn ",
+    "Status": ""
+  },
+  {
+    "No": " 393 ",
+    "Link": " https://sharecode.vn ",
+    "Desc": " code ",
+    "Tag": " share code,  sharecode.vn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 394 ",
+    "Link": " https://shellcreeper.com ",
+    "Desc": " code ",
+    "Tag": " wp,  shellcreeper,  ",
+    "Status": ""
+  },
+  {
+    "No": " 395 ",
+    "Link": " https://sinium.com/seo/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  sinium SEO,  ",
+    "Status": ""
+  },
+  {
+    "No": " 396 ",
+    "Link": " https://skydrive.live.com ",
+    "Desc": " cloud ",
+    "Tag": " ,  Sky drive,  ",
+    "Status": ""
+  },
+  {
+    "No": " 397 ",
+    "Link": " https://spring.io ",
+    "Desc": " code ",
+    "Tag": " web service,  spring io,  ",
+    "Status": ""
+  },
+  {
+    "No": " 398 ",
+    "Link": " https://sugarsync.com ",
+    "Desc": " cloud ",
+    "Tag": " ,  Sugar sync,  ",
+    "Status": ""
+  },
+  {
+    "No": " 399 ",
+    "Link": " https://tailieutiengduc.blogspot.com ",
+    "Desc": " language ",
+    "Tag": " german,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 400 ",
+    "Link": " https://tenten.vn/ ",
+    "Desc": " domain ",
+    "Tag": " ,  Tenten VN,  ",
+    "Status": ""
+  },
+  {
+    "No": " 401 ",
+    "Link": " https://www.pavietnam.vn/",
+    "Desc": " domain hosting ",
+    "Tag": " ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 402 ",
+    "Link": " https://thachpham.com ",
+    "Desc": " code ",
+    "Tag": " PHP,  tutor, WP  ",
+    "Status": ""
+  },
+  {
+    "No": " 403 ",
+    "Link": " https://tools.pingdom.com ",
+    "Desc": " test web ",
+    "Tag": " test speed,  network tool,  ",
+    "Status": ""
+  },
+  {
+    "No": " 404 ",
+    "Link": " https://unity3d.com/ ",
+    "Desc": " code ",
+    "Tag": " ,  game maker,  ",
+    "Status": ""
+  },
+  {
+    "No": " 405 ",
+    "Link": " https://vi.glosbe.com/ ",
+    "Desc": " language ",
+    "Tag": " ,  Tu dien Trung Viet,  ",
+    "Status": ""
+  },
+  {
+    "No": " 406 ",
+    "Link": " https://vnfs-team.com ",
+    "Desc": " movie ",
+    "Tag": " ,  vnfs-team.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 407 ",
+    "Link": " https://web.any.do/ ",
+    "Desc": "  ",
+    "Tag": " ,  any.do,  ",
+    "Status": ""
+  },
+  {
+    "No": " 408 ",
+    "Link": " https://webvr.info/developers/ ",
+    "Desc": " code ",
+    "Tag": " VR,  webvr.info,  ",
+    "Status": ""
+  },
+  {
+    "No": " 409 ",
+    "Link": " https://wetransfer.com/ ",
+    "Desc": " file ",
+    "Tag": " file transfer,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 410 ",
+    "Link": " https://wordpress.vnkings.com/ ",
+    "Desc": " code ",
+    "Tag": " wordpress,  vnking wp,  ",
+    "Status": ""
+  },
+  {
+    "No": " 411 ",
+    "Link": " https://www.arduino.cc/ ",
+    "Desc": " diy ",
+    "Tag": " , upc ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 412 ",
+    "Link": " https://www.autodraw.com/ ",
+    "Desc": " web tool ",
+    "Tag": " auto draw,  autodraw.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 413 ",
+    "Link": " https://www.baokim.vn ",
+    "Desc": " bank ",
+    "Tag": " ,  Bao Kim,  ",
+    "Status": ""
+  },
+  {
+    "No": " 414 ",
+    "Link": " https://www.baokim.vn/giao-dich/danh-sach-website-... ",
+    "Desc": " bank ",
+    "Tag": " ,  BAOKIM SERVICE,  ",
+    "Status": ""
+  },
+  {
+    "No": " 415 ",
+    "Link": " https://www.bing.com/webmaster ",
+    "Desc": " web tool ",
+    "Tag": " webmaster,  bing webmaster,  ",
+    "Status": ""
+  },
+  {
+    "No": " 416 ",
+    "Link": " https://www.bonanza.com/background_burner ",
+    "Desc": " web tool ",
+    "Tag": " img,  Img background burner,  ",
+    "Status": ""
+  },
+  {
+    "No": " 417 ",
+    "Link": " https://www.cgtrader.com/ ",
+    "Desc": " 3D thing ",
+    "Tag": " , 3d model,  ",
+    "Status": ""
+  },
+  {
+    "No": " 418 ",
+    "Link": " https://www.codeavengers.com/ ",
+    "Desc": " code ",
+    "Tag": " ,  elearn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 419 ",
+    "Link": " https://www.codecademy.com ",
+    "Desc": " code ",
+    "Tag": " ,  elearn,  ",
+    "Status": ""
+  },
+  {
+    "No": " 420 ",
+    "Link": " https://www.codeproject.com ",
+    "Desc": " code ",
+    "Tag": " all code,  codeproject,  ",
+    "Status": ""
+  },
+  {
+    "No": " 421 ",
+    "Link": " https://www.coursera.org/ ",
+    "Desc": " code ",
+    "Tag": " online training,  coursera.org, elearn  ",
+    "Status": ""
+  },
+  {
+    "No": " 422 ",
+    "Link": " https://www.danstools.com ",
+    "Desc": " web tool ",
+    "Tag": " ,  danstools Web tool,  ",
+    "Status": ""
+  },
+  {
+    "No": " 423 ",
+    "Link": " https://www.datacamp.com ",
+    "Desc": " e-school ",
+    "Tag": " ,  datacamp.com python, elearn ",
+    "Status": ""
+  },
+  {
+    "No": " 424 ",
+    "Link": " https://www.digitalocean.com/community/tutorials ",
+    "Desc": " tutorial ",
+    "Tag": " code,  digital ocean, elearn ",
+    "Status": ""
+  },
+  {
+    "No": " 425 ",
+    "Link": " https://www.dotcom-tools.com/website-speed-test.aspx ",
+    "Desc": " test web ",
+    "Tag": " test speed,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 426 ",
+    "Link": " https://www.dotnetperls.com/s#wpf~top! ",
+    "Desc": " code ",
+    "Tag": " C# WPF Samples,  dotnetperls,  ",
+    "Status": ""
+  },
+  {
+    "No": " 427 ",
+    "Link": " https://www.dropbox.com/ ",
+    "Desc": " cloud ",
+    "Tag": " ,  Drop box, cloud drive  ",
+    "Status": ""
+  },
+  {
+    "No": " 428 ",
+    "Link": " https://www.dynu.com ",
+    "Desc": " free domain ",
+    "Tag": " domain,  free dns,  ",
+    "Status": ""
+  },
+  {
+    "No": " 429 ",
+    "Link": " https://www.edx.org/ ",
+    "Desc": " code ",
+    "Tag": " ,  edx,  ",
+    "Status": ""
+  },
+  {
+    "No": " 430 ",
+    "Link": " https://www.emuparadise.me ",
+    "Desc": " game down ",
+    "Tag": " ps2 iso,  emuparadise.me,  ",
+    "Status": ""
+  },
+  {
+    "No": " 431 ",
+    "Link": " https://www.entrepreneur.com ",
+    "Desc": " code ",
+    "Tag": " ,  entrepreneur, khoi nghiep  ",
+    "Status": ""
+  },
+  {
+    "No": " 432 ",
+    "Link": " https://www.fastmail.fm/ ",
+    "Desc": " web mail ",
+    "Tag": " ,  FAST MAIL,  ",
+    "Status": ""
+  },
+  {
+    "No": " 433 ",
+    "Link": " https://www.flightradar24.com ",
+    "Desc": " info ",
+    "Tag": " plane route,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 434 ",
+    "Link": " https://www.freecodecamp.com ",
+    "Desc": " e-school ",
+    "Tag": " code,  freecodecamp training, elearn ",
+    "Status": ""
+  },
+  {
+    "No": " 435 ",
+    "Link": " https://www.google.com/android/devicemanager?hl=vi... ",
+    "Desc": "  ",
+    "Tag": " ,  google phone seeker,  ",
+    "Status": ""
+  },
+  {
+    "No": " 436 ",
+    "Link": " https://www.google.com/calendar ",
+    "Desc": "  ",
+    "Tag": " ,  google calendar,  ",
+    "Status": ""
+  },
+  {
+    "No": " 437 ",
+    "Link": " https://www.google.com/webmasters/ ",
+    "Desc": " web tool ",
+    "Tag": " ,  google webmasters,  ",
+    "Status": ""
+  },
+  {
+    "No": " 438 ",
+    "Link": " https://www.howkteam.com ",
+    "Desc": " code ",
+    "Tag": " C#,  howkteam, elearn ",
+    "Status": ""
+  },
+  {
+    "No": " 439 ",
+    "Link": " https://www.jojothemes.com ",
+    "Desc": " theme ",
+    "Tag": " ,  jojothemes.com wp,  ",
+    "Status": ""
+  },
+  {
+    "No": " 440 ",
+    "Link": " https://www.jqueryscript.net ",
+    "Desc": " code ",
+    "Tag": " jquery,  jqueryscript.net,  ",
+    "Status": ""
+  },
+  {
+    "No": " 441 ",
+    "Link": " https://www.khanacademy.org/ ",
+    "Desc": " code ",
+    "Tag": " all stuff,  khanacademy,  ",
+    "Status": ""
+  },
+  {
+    "No": " 442 ",
+    "Link": " https://www.kickstarter.com ",
+    "Desc": " info ",
+    "Tag": " ,  kickstarter.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 443 ",
+    "Link": " https://www.limetorrents.cc/ ",
+    "Desc": " torrent ",
+    "Tag": " ,  limetorrents.cc,  ",
+    "Status": ""
+  },
+  {
+    "No": " 444 ",
+    "Link": " https://www.mobifone.com.vn ",
+    "Desc": " info ",
+    "Tag": " ,  Mobifone,  ",
+    "Status": ""
+  },
+  {
+    "No": " 445 ",
+    "Link": " https://www.notebookcheck.net ",
+    "Desc": " review ",
+    "Tag": " laptop,  Laptop check,  ",
+    "Status": ""
+  },
+  {
+    "No": " 446 ",
+    "Link": " https://www.olofsimren.com ",
+    "Desc": " ebook ",
+    "Tag": " Dynamic NAV,  olofsimren,  ",
+    "Status": ""
+  },
+  {
+    "No": " 447 ",
+    "Link": " https://www.practicalecommerce.com ",
+    "Desc": " ecom ",
+    "Tag": " elearn,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 448 ",
+    "Link": " https://www.skillshare.com/ ",
+    "Desc": " e-school ",
+    "Tag": " code,  skill share, elearn  ",
+    "Status": ""
+  },
+  {
+    "No": " 449 ",
+    "Link": " https://www.smsglobal.com/ ",
+    "Desc": " API ",
+    "Tag": " sms,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 450 ",
+    "Link": " https://www.tensorflow.org ",
+    "Desc": " code ",
+    "Tag": " A.I, ML,  tensorflow.org,  ",
+    "Status": ""
+  },
+  {
+    "No": " 451 ",
+    "Link": " https://www.tinkercad.com/ ",
+    "Desc": " 3D thing ",
+    "Tag": " ,  tinkercad 3D creater,  ",
+    "Status": ""
+  },
+  {
+    "No": " 452 ",
+    "Link": " https://www.tncnonline.com.vn/Pages/TracuuMST.aspx ",
+    "Desc": " public info ",
+    "Tag": " VN tax,  ,  ",
+    "Status": ""
+  },
+  {
+    "No": " 453 ",
+    "Link": " https://www.torrentdownloads.me/ ",
+    "Desc": " torrent ",
+    "Tag": " ,  torrentdownloads,  ",
+    "Status": ""
+  },
+  {
+    "No": " 454 ",
+    "Link": " https://www.udemy.com/ ",
+    "Desc": " code ",
+    "Tag": " elearn,  udemy,  ",
+    "Status": ""
+  },
+  {
+    "No": " 455 ",
+    "Link": " https://www.vietcombank.com.vn/ ",
+    "Desc": " bank ",
+    "Tag": " ,  Vietcombank,  ",
+    "Status": ""
+  },
+  {
+    "No": " 456 ",
+    "Link": " https://www.vietinbank.vn ",
+    "Desc": " bank ",
+    "Tag": " ,  vietinbank,  ",
+    "Status": ""
+  },
+  {
+    "No": " 457 ",
+    "Link": " https://www.wolframalpha.com ",
+    "Desc": " web tool ",
+    "Tag": " multi-function,  wolfram alpha,  ",
+    "Status": ""
+  },
+  {
+    "No": " 458 ",
+    "Link": " https://www.wpftutorial.net/ ",
+    "Desc": " code ",
+    "Tag": " C#,  wpftutorial,  ",
+    "Status": ""
+  },
+  {
+    "No": " 459 ",
+    "Link": " jpf.org.vn ",
+    "Desc": "  ",
+    "Tag": " ,  japan foudation,  ",
+    "Status": ""
+  },
+  {
+    "No": " 460 ",
+    "Link": " timnguonhanggiare.com ",
+    "Desc": " shipper ",
+    "Tag": " ,  timnguonhanggiare.com,  ",
+    "Status": ""
+  },
+  {
+    "No": " 461 ",
+    "Link": " www.dienmaycholon.vn/ ",
+    "Desc": " shopping ",
+    "Tag": " ,  Dien may Cho lon- DT, Laptop,  ",
+    "Status": ""
+  },
+  {
+    "No": " 462 ",
+    "Link": " https://www.i2ocr.com/free-online-vietnamese-ocr ",
+    "Desc": " web toot ",
+    "Tag": " viet ocr  ",
+    "Status": ""
+  },
+  {
+    "No": " 463 ",
+    "Link": " https://gocphim.net/ ",
+    "Desc": " movie ",
+    "Tag": " phim, fim ",
+    "Status": ""
+  },
+  {
+    "No": " 464 ",
+    "Link": " https://www.text2sql.ai/ ",
+    "Desc": " sql ",
+    "Tag": " a.i sql ",
+    "Status": ""
+  },
+  {
+    "No": " 465 ",
+    "Link": " https://www.iban.com/country-codes ",
+    "Desc": " code ",
+    "Tag": " a.i sql ",
+    "Status": ""
+  },
+  {
+    "No": " 466 ",
+    "Link": " https://dartpad.dev/ ",
+    "Desc": " flutter online ",
+    "Tag": " dart ",
+    "Status": ""
+  },
+  {
+    "No": " 467 ",
+    "Link": " https://snipboard.io/ ",
+    "Desc": " snip img online ",
+    "Tag": " snip pic ",
+    "Status": ""
+  },
+  {
+    "No": " 468 ",
+    "Link": " https://stablediffusionweb.com/ ",
+    "Desc": " A.I text 2 img online ",
+    "Tag": " tool ",
+    "Status": ""
+  },
+  {
+    "No": " 469 ",
+    "Link": " https://www.midjourney.com/ ",
+    "Desc": " A.I text 2 img online ",
+    "Tag": " tool ",
+    "Status": ""
+  },
+  {
+    "No": " 470 ",
+    "Link": " https://openai.com/product/dall-e-2 ",
+    "Desc": " A.I text 2 img online ",
+    "Tag": " tool ",
+    "Status": ""
+  },
+  {
+    "No": " 471 ",
+    "Link": " https://resizeimage.net/ ",
+    "Desc": " gif maker, ICO convert ",
+    "Tag": " img resize ",
+    "Status": ""
+  },
+  {
+    "No": " 472 ",
+    "Link": " https://jsonplaceholder.typicode.com ",
+    "Desc": "  API",
+    "Tag": " REST JSON playground ",
+    "Status": ""
+  },
+  {
+    "No": " 473 ",
+    "Link": " https://wokwi.com/ ",
+    "Desc": "  ",
+    "Tag": " Andruino simulator online ",
+    "Status": ""
+  },
+  {
+    "No": " 474 ",
+    "Link": " https://gemini.google.com/",
+    "Desc": "  ",
+    "Tag": " A.I chat gpt",
+    "Status": ""
+  },
+  {
+    "No": " 475 ",
+    "Link": " https://chat.openai.com",
+    "Desc": "  ",
+    "Tag": " A.I chat gpt ",
+    "Status": ""
+  },
+  {
+    "No": " 476 ",
+    "Link": " https://imgbb.com/",
+    "Desc": "  ",
+    "Tag": " share image ",
+    "Status": ""
+  },
+  {
+    "No": " 477 ",
+    "Link": " https://www.internetmarketingninjas.com/",
+    "Desc": "  ",
+    "Tag": " web tools ",
+    "Status": ""
+  },
+  {
+    "No": " 478 ",
+    "Link": " https://qr.io/",
+    "Desc": "  QR ",
+    "Tag": " web tools ",
+    "Status": ""
+  },
+  {
+    "No": " 479 ",
+    "Link": " https://qr-code-generator.ztool.workers.dev/",
+    "Desc": "  QR ",
+    "Tag": " my QR code gen ",
+    "Status": ""
+  },
+  {
+    "No": " 480 ",
+    "Link": " https://www.geeksforgeeks.org/",
+    "Desc": "  info ",
+    "Tag": " web tools ",
+    "Status": ""
+  },
+  {
+    "No": " 481 ",
+    "Link": " https://kbench.com/",
+    "Desc": "  info ",
+    "Tag": " korean benmark",
+    "Status": ""
+  },
+  {
+    "No": " 482 ",
+    "Link": " https://hackr.io/",
+    "Desc": "  info ",
+    "Tag": " IT info",
+    "Status": ""
+  },
+  {
+    "No": " 483 ",
+    "Link": "https://www.seek.com.au/",
+    "Desc": "  job in AUS ",
+    "Tag": " IT info",
+    "Status": ""
+  },
+  {
+    "No": " 484 ",
+    "Link": "https://au.indeed.com/",
+    "Desc": "  job in AUS ",
+    "Tag": " IT info",
+    "Status": ""
+  },
+  {
+    "No": " 485 ",
+    "Link": "https://www.softaculous.com/",
+    "Desc": "  app web ",
+    "Tag": " source web",
+    "Status": ""
+  },
+  {
+    "No": " 486 ",
+    "Link": "https://devwork.vn/",
+    "Desc": "  job dev ",
+    "Tag": " IT job",
+    "Status": ""
+  },
+  {
+    "No": " 487 ",
+    "Link": "https://www.typeit.org/",
+    "Desc": "  type latin language ",
+    "Tag": " Vietnamese, Finnish",
+    "Status": ""
+  },
+  {
+    "No": " 488 ",
+    "Link": "https://www.gizmochina.com/",
+    "Desc": "  tech info ",
+    "Tag": " info",
+    "Status": ""
+  },
+  {
+    "No": " 489 ",
+    "Link": "https://replit.com/",
+    "Desc": "  code online ",
+    "Tag": " VPS ",
+    "Status": ""
+  },
+  {
+    "No": " 490 ",
+    "Link": "https://ttsmp3.com/",
+    "Desc": "  text to speech to mp3 ",
+    "Tag": " text2mp3 ",
+    "Status": ""
+  },
+  {
+    "No": " 491 ",
+    "Link": "https://www.sharepointdiary.com/ ",
+    "Desc": " sharepoint ",
+    "Tag": " ",
+    "Status": ""
+  },
+  {
+    "No": " 492 ",
+    "Link": "https://www.pdfdrive.com/ ",
+    "Desc": " free pdf ",
+    "Tag": " ",
+    "Status": ""
+  },
+  {
+    "No": " 493 ",
+    "Link": "https://www.synology.com/vi-vn/support/RAID_calculator ",
+    "Desc": " Raid calc ",
+    "Tag": " ",
+    "Status": ""
+  },
+  {
+    "No": " 494 ",
+    "Link": "https://www.g2.com/ ",
+    "Desc": " software ranking ",
+    "Tag": " sw reviewer ",
+    "Status": ""
+  },
+  {
+    "No": " 495 ",
+    "Link": "https://chiasemoi.com/ ",
+    "Desc": " share pdf ",
+    "Tag": " ",
+    "Status": ""
+  },
+  {
+    "No": " 496 ",
+    "Link": "https://www.eccouncil.org/ ",
+    "Desc": " security cert ",
+    "Tag": " ",
+    "Status": ""
+  },
+  {
+    "No": " 497 ",
+    "Link": "https://cloudblogger.co.in/",
+    "Desc": " vmware ebook, vmware expert ",
+    "Tag": " ",
+    "Status": ""
+  },
+  {
+    "No": " 498 ",
+    "Link": "https://jsoneditoronline.org/",
+    "Desc": " Json edit online ",
+    "Tag": " ",
+    "Status": ""
+  },
+  {
+    "No": " 499 ",
+    "Link": "https://www.proe.vn/",
+    "Desc": " shopping ",
+    "Tag": " linh kien dien tu",
+    "Status": ""
+  },
+  {
+    "No": " 500 ",
+    "Link": "https://shop.unitree.com/ ",
+    "Desc": " shopping ",
+    "Tag": " robot dog, humaniod ",
+    "Status": ""
+  },
+  {
+    "No": " 501 ",
+    "Link": "https://www.cvedetails.com/ ",
+    "Desc": " web tool ",
+    "Tag": " software vulnerable ",
+    "Status": ""
+  },
+  {
+    "No": " 502 ",
+    "Link": "https://www.avast.com/random-password-generator#pc ",
+    "Desc": " web tool ",
+    "Tag": " pass generator ",
+    "Status": ""
+  },
+  {
+    "No": " 503 ",
+    "Link": "https://xiaomiui.net/ ",
+    "Desc": " web info ",
+    "Tag": "  ",
+    "Status": ""
+  },
+  {
+    "No": " 504 ",
+    "Link": "https://www.zdnet.com/ ",
+    "Desc": " web info ",
+    "Tag": "  ",
+    "Status": ""
+  },
+  {
+    "No": " 505 ",
+    "Link": "https://www.cleanipedia.com/ ",
+    "Desc": " cleanning tips ",
+    "Tag": "  ",
+    "Status": ""
+  },
+  {
+    "No": " 506 ",
+    "Link": "https://pimeyes.com/ ",
+    "Desc": " A.I face search ",
+    "Tag": "  ",
+    "Status": ""
+  },
+  {
+    "No": " 507 ",
+    "Link": "https://app.ludwig.guru/ ",
+    "Desc": " A.I grammar checking ",
+    "Tag": "  ",
+    "Status": ""
+  },
+  {
+    "No": "508 ",
+    "Link": " https://www.ocr.best/image-to-text ",
+    "Desc": " ocr ",
+    "Tag": " ",
+    "Status": ""
+  },
+  {
+    "No": "509 ",
+    "Link": " https://cuudulieuhcm.com/ ",
+    "Desc": " data recovery service ",
+    "Tag": ""
+  },
+  {
+    "No": "510 ",
+    "Link": " https://kb.uconn.edu/space/IKB ",
+    "Desc": " IT support page ",
+    "Tag": " ",
+    "Status": ""
+  },
+  {
+    "No": "511 ",
+    "Link": " https://linktr.ee/ntdev ",
+    "Desc": " win 10 11 Tiny download ",
+    "Tag": " ",
+    "Status": ""
+  },
+  {
+    "No": "512 ",
+    "Link": " https://www.guru99.com/ ",
+    "Desc": " learn SAP, Testing Free ",
+    "Tag": " ",
+    "Status": ""
+  }
+]
+const jsonData02 = [
+  {
+    "No": " 513  ",
+    "Link": " https://tamxuanla.blogspot.com/  ",
+    "Desc": " IT  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 514  ",
+    "Link": " https://activedirectorypro.com/  ",
+    "Desc": " IT  ",
+    "Tag": " active directory ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 515  ",
+    "Link": " https://nguyenvanquangcse.wordpress.com/  ",
+    "Desc": " IT  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 516  ",
+    "Link": " https://dash.cloudflare.com/ ",
+    "Desc": " Cloud Service  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 517  ",
+    "Link": " https://www.sordum.org/  ",
+    "Desc": " App  ",
+    "Tag": " sỏrdum free app ok ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 518  ",
+    "Link": " https://faceswap.dev/  ",
+    "Desc": " Dev  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 519  ",
+    "Link": " https://butchiso.com/  ",
+    "Desc": " Dev  ",
+    "Tag": " Blog,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 520  ",
+    "Link": " https://www.binance.com/en  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " Exchange,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 521  ",
+    "Link": " https://coinmarketcap.com/  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " Exchange,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 522  ",
+    "Link": " https://portis.io/  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " Exchange,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 523  ",
+    "Link": " https://axieinfinity.com/  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " P2E,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 524  ",
+    "Link": " https://playtoearn.net/  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " P2E,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 525  ",
+    "Link": " https://www.indiatvnews.com/  ",
+    "Desc": " News  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 526  ",
+    "Link": " https://7news.com.au/  ",
+    "Desc": " News  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 527  ",
+    "Link": " business.html  ",
+    "Desc": " MyBusiness  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 528  ",
+    "Link": " https://www.elephantsql.com/  ",
+    "Desc": " Database  ",
+    "Tag": " Die   ",
+    "Status": ""
+  },
+  {
+    "No": " 529  ",
+    "Link": " https://www.mongodb.com/  ",
+    "Desc": " Database  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 530  ",
+    "Link": " https://vnexpress.net/  ",
+    "Desc": " News  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 531  ",
+    "Link": " https://genk.vn/  ",
+    "Desc": " News  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 532  ",
+    "Link": " https://www.bbc.co.uk/programmes/p02nq0gn/episodes/guide  ",
+    "Desc": " News  ",
+    "Tag": " BBC POSTCAST ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 533  ",
+    "Link": " https://vietlott.vn/  ",
+    "Desc": " News  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 534  ",
+    "Link": " https://www.quora.com  ",
+    "Desc": " Social  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 535  ",
+    "Link": " https://www.facebook.com/  ",
+    "Desc": " Social  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 536  ",
+    "Link": " https://web.telegram.org  ",
+    "Desc": " Social  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 537  ",
+    "Link": " https://chat.zalo.me/  ",
+    "Desc": " Social  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 538  ",
+    "Link": " https://app.slack.com/  ",
+    "Desc": " Social  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 539  ",
+    "Link": " https://discord.com/  ",
+    "Desc": " Social  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 540  ",
+    "Link": " https://x.com  ",
+    "Desc": " Social  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 541  ",
+    "Link": " https://sites.google.com  ",
+    "Desc": " Site  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 542  ",
+    "Link": " https://www.blogger.com  ",
+    "Desc": " Site  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 543  ",
+    "Link": " https://infinityfree.net  ",
+    "Desc": " Site  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 544  ",
+    "Link": " https://weebly.com  ",
+    "Desc": " Site  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 545  ",
+    "Link": " https://framer.com  ",
+    "Desc": " Site  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 546  ",
+    "Link": " https://market.playdapp.com/  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 547  ",
+    "Link": " https://etherscan.io  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 548  ",
+    "Link": " https://polygonscan.com  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 549  ",
+    "Link": " https://careerviet.vn  ",
+    "Desc": " Job  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 550  ",
+    "Link": " https://www.vietnamworks.com  ",
+    "Desc": " Job  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 551  ",
+    "Link": " https://opensea.io  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 552  ",
+    "Link": " https://egamers.io  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " P2E,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 553  ",
+    "Link": " https://quickchart.io  ",
+    "Desc": " Lib  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 554  ",
+    "Link": " https://www.chartjs.org  ",
+    "Desc": " Lib  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 555  ",
+    "Link": " https://vncoder.vn  ",
+    "Desc": " Dev  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 556  ",
+    "Link": " https://en.scratch-wiki.info  ",
+    "Desc": " Dev  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 557  ",
+    "Link": " https://www.codecademy.com  ",
+    "Desc": " Dev  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 558  ",
+    "Link": " https://cheatography.com  ",
+    "Desc": " Dev  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 559  ",
+    "Link": " https://freetuts.net  ",
+    "Desc": " Dev  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 560  ",
+    "Link": " https://viettuts.vn  ",
+    "Desc": " Dev  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 561  ",
+    "Link": " https://uniswap.org  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 562  ",
+    "Link": " https://www.gate.io  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 563  ",
+    "Link": " https://polygon.technology  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 564  ",
+    "Link": " https://pancakeswap.finance  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 565  ",
+    "Link": " https://www.coingecko.com  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 566  ",
+    "Link": " https://quickswap.exchange  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 567  ",
+    "Link": " https://app.arche.network  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 568  ",
+    "Link": " https://moot.us  ",
+    "Desc": " Social  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 569  ",
+    "Link": " https://cointelegraph.com  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 570  ",
+    "Link": " https://hub.gamefi.org  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 571  ",
+    "Link": " https://sitecheck.sucuri.net  ",
+    "Desc": " Security  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 572  ",
+    "Link": " https://smallpdf.com  ",
+    "Desc": " Tool  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 573  ",
+    "Link": " https://www.vpnmentor.com/  ",
+    "Desc": " Tool  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 574  ",
+    "Link": " https://www.topfreeintro.com  ",
+    "Desc": " news  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 575  ",
+    "Link": " https://www.cursors-4u.com  ",
+    "Desc": " Tool  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 576  ",
+    "Link": " https://www.trustpilot.com  ",
+    "Desc": " Reviewer  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 577  ",
+    "Link": " https://cakedefi.com  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 578  ",
+    "Link": " https://dappradar.com  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 579  ",
+    "Link": " https://poocoin.app  ",
+    "Desc": " Bitcoin  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 580  ",
+    "Link": " https://www.dantaichinh.com  ",
+    "Desc": " Acc  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 581  ",
+    "Link": " https://resizeimage.net  ",
+    "Desc": " Tool  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 582  ",
+    "Link": " https://vms.drweb.com  ",
+    "Desc": " Security  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 583  ",
+    "Link": " https://opentip.kaspersky.com  ",
+    "Desc": " Security  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 584  ",
+    "Link": " http://tratu.coviet.vn  ",
+    "Desc": " Dic  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 585  ",
+    "Link": " https://dichvucong.dancuquocgia.gov.vn  ",
+    "Desc": " Tool  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 586  ",
+    "Link": " https://www.oxfordlearnersdictionaries.com  ",
+    "Desc": " Dic  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 587  ",
+    "Link": " https://pte.tools/  ",
+    "Desc": " PTE test  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 588  ",
+    "Link": " https://dangky.tinhoctre.vn/  ",
+    "Desc": " contest  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 589  ",
+    "Link": " https://dictionary.cambridge.org  ",
+    "Desc": " Dic  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 590  ",
+    "Link": " https://blogchiasekienthuc.com  ",
+    "Desc": " IT  ",
+    "Tag": " news,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 591  ",
+    "Link": " https://www.tomshardware.com  ",
+    "Desc": " IT  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 592  ",
+    "Link": " https://opensource.com  ",
+    "Desc": " IT  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 593  ",
+    "Link": " https://betterprogramming.pub  ",
+    "Desc": " Dev  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 594  ",
+    "Link": " https://vatvostudio.vn  ",
+    "Desc": " News  ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 595  ",
+    "Link": " 	https://cloud.mongodb.com/  ",
+    "Desc": " online PostgreSQL db",
+    "Tag": "SQL, data ",
+    "Status": ""
+  },
+  {
+    "No": " 596  ",
+    "Link": " 	https://www.pythonanywhere.com/  ",
+    "Desc": " online python",
+    "Tag": "host   ",
+    "Status": ""
+  },
+  {
+    "No": " 597  ",
+    "Link": " 	https://home.zoho.com/home ",
+    "Desc": " one auth ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+    {
+    "No": " 598  ",
+    "Link": " https://aws.amazon.com ",
+    "Desc": " Cloud Service ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 599  ",
+    "Link": " 	https://console.neo4j.io/ ",
+    "Desc": " online data ",
+    "Tag": " graph data   ",
+    "Status": ""
+  },
+  {
+    "No": " 600  ",
+    "Link": " 	https://www.shakker.ai ",
+    "Desc": " A.I image gen ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 601  ",
+    "Link": " 	https://cloud.dify.ai/ ",
+    "Desc": " A.I ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 602  ",
+    "Link": " 	https://videogen.io/ ",
+    "Desc": " A.I video gen ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 603  ",
+    "Link": " 	https://www.napkin.ai/ ",
+    "Desc": " A.I chart ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 604  ",
+    "Link": " 	https://snapcut.ai/ ",
+    "Desc": " A.I cut video ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 605  ",
+    "Link": " 	https://poe.com/ ",
+    "Desc": " A.I all ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 606  ",
+    "Link": " 	http://www.hoclaixedinhtienhoang.vn/ ",
+    "Desc": " A1 B2 ",
+    "Tag": " school   ",
+    "Status": ""
+  },
+  {
+    "No": " 607  ",
+    "Link": " 	http://nguyentraibh.edu.vn/ ",
+    "Desc": " school ",
+    "Tag": " ,  ,   ",
+    "Status": ""
+  },
+  {
+    "No": " 608  ",
+    "Link": " 	https://itforvn.com ",
+    "Desc": " eschool ",
+    "Tag": " IT   ",
+    "Status": ""
+  },
+  {
+    "No": " 609  ",
+    "Link": " 	https://cloud.uipath.com/ ",
+    "Desc": " automate ",
+    "Tag": " tool, ERP  ",
+    "Status": ""
+  },
+  {
+    "No": " 610  ",
+    "Link": " 	https://www.producthunt.com/ ",
+    "Desc": " software ",
+    "Tag": " sw review  ",
+    "Status": ""
+  },
+  {
+    "No": " 611  ",
+    "Link": " 	https://m365maps.com/ ",
+    "Desc": " license ",
+    "Tag": " app  ",
+    "Status": ""
+  },
+  {
+    "No": " 612  ",
+    "Link": " 	https://www.apeuni.com/ ",
+    "Desc": " english ",
+    "Tag": " language PTE  ",
+    "Status": ""
+  },
+  {
+    "No": " 613  ",
+    "Link": " 	https://en.duolingo.com/ ",
+    "Desc": " learn ",
+    "Tag": " language  ",
+    "Status": ""
+  },
+  {
+    "No": " 614  ",
+    "Link": " 	https://runkit.com/ ",
+    "Desc": " js ",
+    "Tag": " npm online code  ",
+    "Status": ""
+  },
+  {
+    "No": " 615  ",
+    "Link": " 	https://thuvienphapluat.vn/ ",
+    "Desc": " law vn ",
+    "Tag": " app  ",
+    "Status": ""
+  },
+  {
+    "No": " 616  ",
+    "Link": " 	https://huggingface.co/ ",
+    "Desc": " A.I source code ",
+    "Tag": "   ",
+    "Status": ""
+  },
+  {
+    "No": " 617  ",
+    "Link": " 	https://gitmind.com/ ",
+    "Desc": " A.I mind map ",
+    "Tag": " app  ",
+    "Status": ""
+  },
+  {
+    "No": " 618  ",
+    "Link": " 	https://www.udacity.com/ ",
+    "Desc": " 	another learning portal ",
+    "Tag": " app  ",
+    "Status": ""
+  },
+  {
+    "No": " 619  ",
+    "Link": " 	https://foursquare.com/ ",
+    "Desc": " A.I mind map ",
+    "Tag": " app  ",
+    "Status": ""
+  },
+  {
+    "No": " 620  ",
+    "Link": " 	https://app.ludwig.guru/ ",
+    "Desc": " 	english gramar check ",
+    "Tag": " app  ",
+    "Status": ""
+  },
+  {
+    "No": " 621  ",
+    "Link": " 	https://viblo.asia/ ",
+    "Desc": " learning portal ",
+    "Tag": " app  ",
+    "Status": ""
+  },
+  {
+    "No": " 622  ",
+    "Link": " 	https://www.sachmem.vn/ ",
+    "Desc": " ebook school ",
+    "Tag": " app  ",
+    "Status": ""
+  },
+  {
+    "No": " 623  ",
+    "Link": " 	https://track.toggl.com/ ",
+    "Desc": " time tracking ",
+    "Tag": " app  ",
+    "Status": ""
+  },
+  {
+    "No": " 624  ",
+    "Link": " 	https://leetcode.com/ ",
+    "Desc": " code arena ",
+    "Tag": " app  ",
+    "Status": ""
+  },
+  {
+    "No": " 625  ",
+    "Link": " 	https://softwareg.com.au/ ",
+    "Desc": " software ",
+    "Tag": " app retail  ",
+    "Status": ""
+  },
+  {
+    "No": " 626  ",
+    "Link": " 	https://www.dzine.ai/ ",
+    "Desc": " A.I 2D to 3D ",
+    "Tag": " app  ",
+    "Status": ""
+  },
+  {
+    "No": " 627  ",
+    "Link": " 	https://www.gumtree.com.au/ ",
+    "Desc": " online shopping ",
+    "Tag": " job  ",
+    "Status": ""
+  },
+  {
+    "No": " 628  ",
+    "Link": " 	https://pixlr.com/ ",
+    "Desc": " A.I ",
+    "Tag": " face swap  ",
+    "Status": ""
+  },
+    {
+    "No": " 629  ",
+    "Link": " 	https://help.airdroid.com/hc/en-us ",
+    "Desc": " Android cast ",
+    "Tag": "   ",
+    "Status": ""
+  },
+  {
+    "No": " 630  ",
+    "Link": " 	https://lcdung.top/ ",
+    "Desc": " Dev ",
+    "Tag": " IT  ",
+    "Status": ""
+  },
+  {
+    "No": " 631  ",
+    "Link": " 	https://foxlearn.com/ ",
+    "Desc": " Dev ",
+    "Tag": " IT  ",
+    "Status": ""
+  },
+  {
+    "No": " 632  ",
+    "Link": " 	https://quantribaomat.com/ ",
+    "Desc": " Security ",
+    "Tag": " IT  ",
+    "Status": ""
+  },
+    {
+    "No": " 633  ",
+    "Link": " 	https://www.votranthi.net/ ",
+    "Desc": " Tip ",
+    "Tag": " IT  ",
+    "Status": ""
+  },
+  {
+    "No": " 634  ",
+    "Link": " 	https://aitracuuluat.vn/ ",
+    "Desc": " A.I ",
+    "Tag": " Law, Luật ",
+    "Status": ""
+  },
+  {
+    "No": " 635  ",
+    "Link": " 	https://baohiemxahoi.gov.vn/tracuu/pages/tra-cuu-thoi-han-su-dung-the-bhyt.aspx ",
+    "Desc": " Check BHXH ",
+    "Tag": " BHYT, BHTN ",
+    "Status": ""
+  },
+  {
+    "No": " 636  ",
+    "Link": " 	https://papago.naver.com/ ",
+    "Desc": " Dic ",
+    "Tag": " Korea ",
+    "Status": ""
+  },
+    {
+    "No": " 637  ",
+    "Link": " 	https://builtin.com/ ",
+    "Desc": " Job ",
+    "Tag": " IT US ",
+    "Status": ""
+  },
+    {
+    "No": " 638  ",
+    "Link": " 	https://www.crunchboard.com/ ",
+    "Desc": " Job ",
+    "Tag": " IT ",
+    "Status": ""
+  },
+    {
+    "No": " 639  ",
+    "Link": " 	https://www.dice.com/ ",
+    "Desc": " Dic ",
+    "Tag": " Korea ",
+    "Status": ""
+  },
+    {
+    "No": " 640  ",
+    "Link": " 	https://www.diversityjobs.com/ ",
+    "Desc": " Dic ",
+    "Tag": " Korea ",
+    "Status": ""
+  },
+    {
+    "No": " 641  ",
+    "Link": " 	https://www.diversifytech.com/job-board/ ",
+    "Desc": " Dic ",
+    "Tag": " Korea ",
+    "Status": ""
+  },
+  {
+    "No": " 642  ",
+    "Link": " 	https://www.meetup.com/ ",
+    "Desc": " Social ",
+    "Tag": " Tech mentor ",
+    "Status": ""
+  },
+  {
+    "No": " 643  ",
+    "Link": " 	https://score.org ",
+    "Desc": " Social ",
+    "Tag": " Tech mentor ",
+    "Status": ""
+  },
+  {
+    "No": " 644  ",
+    "Link": " 	https://score.org ",
+    "Desc": " Social ",
+    "Tag": " Tech mentor ",
+    "Status": ""
+  },
+  {
+    "No": " 645  ",
+    "Link": " 	https://pagespeed.web.dev/ ",
+    "Desc": " Tool Web ",
+    "Tag": " test web speed ",
+    "Status": ""
+  },
+  {
+    "No": " 646  ",
+    "Link": " 	https://lu.ma/ ",
+    "Desc": " Study Group ",
+    "Tag": " Online ",
+    "Status": ""
+  },
+  {
+    "No": " 647  ",
+    "Link": " 	https://laptrinhvb.net/ ",
+    "Desc": " free code ",
+    "Tag": " C# VBnet ",
+    "Status": ""
+  },
+  {
+    "No": " 648  ",
+    "Link": " 	https://tuhocict.com/ ",
+    "Desc": " free code study ",
+    "Tag": " C# VBnet ",
+    "Status": ""
+  },
+  {
+    "No": " 649  ",
+    "Link": " 	https://it.1devops.io/ ",
+    "Desc": " IT tool ",
+    "Tag": " Code Dev ",
+    "Status": ""
+  },
+  {
+    "No": " 650  ",
+    "Link": " 	https://www.life-global.org/ ",
+    "Desc": " free online study ",
+    "Tag": " IT school ",
+    "Status": ""
+  },
+  {
+    "No": " 651  ",
+    "Link": " 	https://localai.io/ ",
+    "Desc": " A.I local ",
+    "Tag": "  ",
+    "Status": ""
+  },
+    {
+    "No": " 652  ",
+    "Link": " 	https://jobs.smartrecruiters.com ",
+    "Desc": " job ",
+    "Tag": " Bosch ",
+    "Status": ""
+  },
+      {
+    "No": " 653  ",
+    "Link": " 	https://www.averydennison.com/en/home/careers/search-jobs.html ",
+    "Desc": " job ",
+    "Tag": " avery dennison ",
+    "Status": ""
+  },
+  {
+    "No": " 654  ",
+    "Link": " 	https://www.pdf2go.com/ ",
+    "Desc": " pdf ",
+    "Tag": " epub DJVU converter ",
+    "Status": ""
+  },
+  {
+    "No": " 655  ",
+    "Link": " 	hhttps://thuvienhoclieu.com/ ",
+    "Desc": " pdf download ",
+    "Tag": " thcs, ptth 10,11,12",
+    "Status": ""
+  },
+  {
+    "No": " 656  ",
+    "Link": " 	https://quizizz.com/ ",
+    "Desc": " quiz ",
+    "Tag": " test choice",
+    "Status": ""
+  },
+  {
+    "No": " 657  ",
+    "Link": " 	https://ideone.com/ ",
+    "Desc": " online code ",
+    "Tag": " C# Java C++ JS",
+    "Status": ""
+  },
+  {
+    "No": " 658  ",
+    "Link": " 	https://codelearn.io/ ",
+    "Desc": " learn study code ",
+    "Tag": " vn",
+    "Status": ""
+  },
+  {
+    "No": " 659  ",
+    "Link": " 	https://wheelofnames.com/vi/ ",
+    "Desc": " game random name ",
+    "Tag": " fun",
+    "Status": ""
+  },
+    {
+    "No": " 660  ",
+    "Link": " 	https://azota.vn/ ",
+    "Desc": " quiz ",
+    "Tag": " test",
+    "Status": ""
+  },
+];
+
+// Function to render JSON data into the HTML table
+function populateTable(data) {
+    const tableBody = document.querySelector('#jsonTable tbody');
+    data.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${item.No}</td>
+        <td>
+        <a href="${item.Link}" class="btn btn-info span2" role="button" target = _blank >${item.Link} </a>
+        </td>
+        <td>${item.Desc}</td><td>${item.Tag}</td><td>${item.Status}</td>`;
+        tableBody.appendChild(row);
+    });
+}
+
+// Populate the table with JSON data
+populateTable(jsonData01);
+populateTable(jsonData02);
+
+// Initialize DataTable
+$(document).ready(function () {
+    //$('#jsonTable').DataTable();
+new DataTable('#jsonTable', {
+    lengthMenu: [
+        [10, 25, 50, -1],
+        [10, 25, 50, 'All']
+    ]
+});
+
 });
 </script>
+
+<footer class="container-fluid text-center">
+  <p>Created by IT</p>
+
+</footer>
+
 </body>
 </html>
